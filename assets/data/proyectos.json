@@ -36,7 +36,7 @@
       "ciudad": "Ocoa",
       "categoria": "Comercial",
       "paneles": 45,
-      "kwp": "26.4",
+      "kwp": "31.9",
       "img": "/assets/img/ocoa.jpg",
       "alt": "Instalación comercial en Ocoa"
     },
@@ -44,7 +44,7 @@
       "ciudad": "Santo Domingo este",
       "categoria": "Residencial",
       "paneles": 9,
-      "kwp": "4.8",
+      "kwp": "5.6",
       "img": "/assets/img/santoDeste.png",
       "alt": "Residencia en Santo Domingo este"
     }
