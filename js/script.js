@@ -530,6 +530,9 @@ document.addEventListener('DOMContentLoaded', function () {
         var outRoiBar = document.getElementById('calc-roi-bar');
         var outKwp = document.getElementById('out-kwp');
         var outCo2 = document.getElementById('out-co2');
+        var outKwhDisplay = document.getElementById('calc-kwh-out');
+        var outBillDisplay = document.getElementById('calc-bill-out');
+        var outNewBill = document.getElementById('calc-newbill');
 
         function fmt(n) { return 'RD$ ' + Math.round(n).toLocaleString('es-DO'); }
 
@@ -542,6 +545,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
             outMonthly.textContent = fmt(monthly);
             outYearly.textContent = fmt(yearly);
+
+            if (outKwhDisplay) outKwhDisplay.textContent = Math.round(kwh).toLocaleString('es-DO') + ' kWh';
+            if (outBillDisplay) outBillDisplay.textContent = fmt(bill);
+            if (outNewBill) outNewBill.textContent = fmt(Math.max(0, bill - monthly));
 
             var sysCost = (kwh / KWH_PER_KW) * COST_PER_KW;
             if (yearly > 0 && sysCost > 0) {

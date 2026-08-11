@@ -627,19 +627,40 @@
                         inspección técnica.</div>
                 </div>
                 <div class="calc-results">
-                    <div class="calc-results__grid">
-                        <div class="res-box">
-                            <div class="res-box__label">Ahorro mensual</div>
-                            <div class="res-box__value" id="calc-monthly">RD$ 0</div>
+                    <div class="bill">
+                        <div class="bill__head">
+                            <div class="bill__head-title">Estimado de tu factura solar</div>
+                            <div class="bill__head-sub">Basado en tu consumo actual</div>
                         </div>
-                        <div class="res-box">
-                            <div class="res-box__label">Ahorro anual</div>
-                            <div class="res-box__value" id="calc-yearly">RD$ 0</div>
+                        <div class="bill__rows">
+                            <div class="bill__row">
+                                <span class="bill__label">Consumo mensual</span>
+                                <span class="bill__value" id="calc-kwh-out">0 kWh</span>
+                            </div>
+                            <div class="bill__row">
+                                <span class="bill__label">Factura actual</span>
+                                <span class="bill__value" id="calc-bill-out">RD$ 0</span>
+                            </div>
+                            <div class="bill__row bill__row--discount">
+                                <span class="bill__label">Ahorro con energía solar</span>
+                                <span class="bill__value">− <span id="calc-monthly">RD$ 0</span></span>
+                            </div>
                         </div>
-                        <div class="res-box res-box--wide">
-                            <div class="res-box__row"><span class="res-box__label" style="margin:0">Retorno de inversión
-                                    estimado</span><span class="res-box__value res-box__value--white"
-                                    id="calc-roi">—</span></div>
+                        <div class="bill__divider" aria-hidden="true"></div>
+                        <div class="bill__total">
+                            <span>Nueva factura estimada</span>
+                            <span id="calc-newbill">RD$ 0</span>
+                        </div>
+                        <div class="bill__divider" aria-hidden="true"></div>
+                        <div class="bill__row">
+                            <span class="bill__label">Ahorro anual estimado</span>
+                            <span class="bill__value bill__value--accent" id="calc-yearly">RD$ 0</span>
+                        </div>
+                        <div class="bill__roi">
+                            <div class="bill__row" style="margin-bottom:10px">
+                                <span class="bill__label">Retorno de inversión estimado</span>
+                                <span class="bill__value" id="calc-roi">—</span>
+                            </div>
                             <div class="roi-bar">
                                 <div class="roi-bar__fill" id="calc-roi-bar"></div>
                             </div>
@@ -865,7 +886,7 @@
         </div>
 
         <div class="footer__certs">
-            <div class="footer__certs-title">📜 Certificaciones y Respaldo Internacional</div>
+            <div class="footer__certs-title">Certificaciones y Respaldo Internacional</div>
             <p class="footer__certs-text">En Ecovatio Energy, estamos certificados por el <strong>IEEE</strong>, por
                 <strong>Solis</strong>, por <strong>Huawei</strong> y otras marcas internacionales y líderes a nivel
                 mundial.</p>

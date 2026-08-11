@@ -705,6 +705,39 @@ html.js .reveal.in { animation: rise .7s ease both; opacity: 1; }
 .roi-bar__fill { height: 100%; width: 0; background: linear-gradient(90deg, var(--accent), var(--accent-2)); border-radius: 99px; transition: width .5s; }
 .roi-scale { display: flex; justify-content: space-between; margin-top: 8px; font-size: 10.5px; color: rgba(255, 255, 255, .4); }
 
+/* ---------- Factura (calculadora) ---------- */
+.bill {
+    background: rgba(255, 255, 255, .04);
+    border: 1px solid rgba(255, 255, 255, .14);
+    border-radius: 16px;
+    padding: 26px;
+}
+
+.bill__head-title { font-size: 15px; font-weight: 700; color: #fff; }
+.bill__head-sub { font-size: 12px; color: rgba(255, 255, 255, .55); margin-top: 3px; }
+
+.bill__rows { display: flex; flex-direction: column; gap: 12px; margin-top: 20px; }
+
+.bill__row { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; font-size: 13.5px; }
+.bill__label { color: rgba(255, 255, 255, .65); }
+.bill__value { color: #fff; font-weight: 700; white-space: nowrap; }
+.bill__value--accent { color: var(--accent); }
+
+.bill__row--discount .bill__label,
+.bill__row--discount .bill__value { color: var(--accent); }
+
+.bill__divider {
+    border: none;
+    border-top: 1.5px dashed rgba(255, 255, 255, .22);
+    margin: 20px 0;
+}
+
+.bill__total { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.bill__total span:first-child { font-size: 13px; font-weight: 600; color: rgba(255, 255, 255, .75); }
+.bill__total span:last-child { font-size: clamp(24px, 2.4vw, 30px); font-weight: 800; color: #fff; }
+
+.bill__roi { margin-top: 20px; }
+
 /* ---------- Testimonios ---------- */
 .testimonial-card {
     background: var(--card);
