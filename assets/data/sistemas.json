@@ -45,11 +45,11 @@
           "alt": "Batería WeCo 16K0 LV"
         },
         {
-          "tag": "Pytes ESS",
+          "tag": "HV48100",
           "titulo": "Batería Pytes ESS",
-          "descripcion": "Sistema de almacenamiento LiFePO₄ de alta capacidad para energía de respaldo confiable e integración perfecta en instalaciones híbridas.",
-          "spec": "Litio LiFePO4 de larga vida",
-          "img": "/assets/img/baterias/pytes-bateria.png",
+          "descripcion": "Sistema de almacenamiento de energía distribuida en gabinete con grado de protección IP20, que integra el paquete de baterías, la caja de control de alto voltaje y el sistema de administración de baterías.",
+          "spec": "energía de emergencia",
+          "img": "/assets/img/baterias/pytesBateria.webp",
           "alt": "Batería Pytes ESS"
         }
         
@@ -68,14 +68,7 @@
           "img": "/assets/img/baterias/Weco_Residenziali_XTS.png",
           "alt": "Batería WeCo Serie XTS"
         },
-        {
-          "tag": "5K3 EVO · 5,22 kWh",
-          "titulo": "Inversor WeCo de doble voltaje",
-          "descripcion": "Solución LiFePO₄ de alta eficiencia para aplicaciones residenciales y comerciales, con integración híbrida avanzada e IP66.",
-          "spec": "Rendimiento y control continuo",
-          "img": "/assets/img/inversores/Weco_Residenziali_5K3-EVO-1.png",
-          "alt": "Inversor WeCo 5K3 EVO"
-        },
+        
         {
           "tag": "Victron Energy",
           "titulo": "Inversores Victron Energy",

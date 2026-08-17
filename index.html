@@ -763,10 +763,51 @@
     <!-- ================= CONTACTO ================= -->
     <section id="contacto" class="section">
         <div class="wrap">
-            <div class="eyebrow">Contacto</div>
-            <h2 class="section-title">Empiece a ahorrar hoy mismo.</h2>
+            <div class="eyebrow eyebrow--dash">Contacto</div>
+            <h2 class="section-title">Empiece a ahorrar<br><span class="section-title__accent">hoy mismo.</span></h2>
+            <p class="contact-lede">Cotización sin compromiso. Un ingeniero revisa su consumo y le dice exactamente
+                cuánto puede ahorrar.</p>
             <div class="contact-grid" style="margin-top:54px">
+                <div class="contact-side">
+                    <div class="contact-info">
+                        <a class="contact-info__row" href="https://wa.me/message/S7ORWACDSX3UG1" target="_blank"
+                            rel="noopener">
+                            <span class="contact-info__label">WhatsApp</span>
+                            <span class="contact-info__value">Escríbanos ahora →</span>
+                        </a>
+                        <a class="contact-info__row" href="tel:+18095697499">
+                            <span class="contact-info__label">Teléfono</span>
+                            <span class="contact-info__value">(809) 569-7499</span>
+                        </a>
+                        <a class="contact-info__row" href="mailto:servicios@ecovatioenergy.com">
+                            <span class="contact-info__label">Correo</span>
+                            <span class="contact-info__value">servicios@ecovatioenergy.com</span>
+                        </a>
+                        <div class="contact-info__row">
+                            <span class="contact-info__label">Ubicación</span>
+                            <span class="contact-info__value">Santo Domingo, R.D.</span>
+                        </div>
+                        <div class="contact-stats">
+                            <!-- <div class="contact-stats__item">
+                                <div class="contact-stats__num">24 h</div>
+                                <div class="contact-stats__label">Respuesta</div>
+                            </div>
+                            <div class="contact-stats__item">
+                                <div class="contact-stats__num">+180</div>
+                                <div class="contact-stats__label">Instalaciones</div>
+                            </div>
+                            <div class="contact-stats__item">
+                                <div class="contact-stats__num">25 años</div>
+                                <div class="contact-stats__label">Garantía</div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
                 <form id="contact-form" class="contact-form" action="https://formspree.io/f/mykdnndz" method="POST">
+                    <div class="contact-form__head">
+                        <h3 class="contact-form__title">Solicite su cotización</h3>
+                        <span class="badge">Gratis</span>
+                    </div>
                     <div class="contact-form__grid">
                         <label class="field"><span>Nombre</span><input type="text" name="nombre" placeholder="Su nombre"
                                 required></label>
@@ -776,73 +817,50 @@
                                 placeholder="(809) 000-0000" required></label>
                         <label class="field"><span>Correo</span><input type="email" name="correo"
                                 placeholder="nombre@correo.com"></label>
-                        <label class="field field--full"><span>Provincia</span>
-                            <select name="provincia">
-                                <option value="">Seleccione su provincia</option>
-                                <option>Distrito Nacional</option>
-                                <option>Santo Domingo</option>
-                                <option>Santiago</option>
-                                <option>La Altagracia</option>
-                                <option>Puerto Plata</option>
-                                <option>San Cristóbal</option>
-                                <option>La Vega</option>
-                                <option>Otra</option>
-                            </select>
-                        </label>
-                        <label class="field field--full"><span>Mensaje</span><textarea name="mensaje" rows="4"
+                        <div class="field field--full">
+                            <span>Provincia</span>
+                            <div class="pill-group">
+                                <label class="pill"><input type="radio" name="provincia" value="Santo Domingo"
+                                        checked><span>Santo Domingo</span></label>
+                                <label class="pill"><input type="radio" name="provincia"
+                                        value="Distrito Nacional"><span>Distrito Nacional</span></label>
+                                <label class="pill"><input type="radio" name="provincia"
+                                        value="Santiago"><span>Santiago</span></label>
+                                <label class="pill"><input type="radio" name="provincia"
+                                        value="La Altagracia"><span>La Altagracia</span></label>
+                                <label class="pill"><input type="radio" name="provincia"
+                                        value="San Cristóbal"><span>San Cristóbal</span></label>
+                                <label class="pill"><input type="radio" name="provincia"
+                                        value="Puerto Plata"><span>Puerto Plata</span></label>
+                                <label class="pill"><input type="radio" name="provincia"
+                                        value="La Vega"><span>La Vega</span></label>
+                                <label class="pill"><input type="radio" name="provincia"
+                                        value="Otra"><span>Otra</span></label>
+                            </div>
+                        </div>
+                        <div class="field field--full">
+                            <span>Consumo mensual estimado</span>
+                            <div class="pill-group">
+                                <label class="pill"><input type="radio" name="consumo"
+                                        value="Menos de RD$5,000"><span>Menos de RD$5,000</span></label>
+                                <label class="pill"><input type="radio" name="consumo"
+                                        value="RD$5,000 – 15,000"><span>RD$5,000 – 15,000</span></label>
+                                <label class="pill"><input type="radio" name="consumo"
+                                        value="RD$15,000 – 40,000"><span>RD$15,000 – 40,000</span></label>
+                                <label class="pill"><input type="radio" name="consumo"
+                                        value="Más de RD$40,000"><span>Más de RD$40,000</span></label>
+                            </div>
+                        </div>
+                        <label class="field field--full"><span>Mensaje (opcional)</span><textarea name="mensaje" rows="4"
                                 placeholder="Cuéntenos sobre su proyecto"></textarea></label>
                     </div>
-                    <button type="submit" class="btn btn--primary btn--block">Solicitar Cotización</button>
+                    <div class="contact-form__footer">
+                        <p class="contact-form__privacy">Sus datos solo se usan para preparar la cotización.</p>
+                        <button type="submit" class="btn btn--dark">Solicitar cotización →</button>
+                    </div>
                     <div id="form-status" class="form-status">✓ Datos recibidos exitosamente. Le contactaremos pronto.
                     </div>
                 </form>
-                <div class="contact-side">
-                    <div class="contact-info">
-                        <div class="contact-info__row">
-                            <a href="https://wa.me/message/S7ORWACDSX3UG1" target="_blank" rel="noopener">
-                                <div class="contact-info__icon"><svg class="icon">
-                                        <use href="#i-whatsapp"></use>
-                                    </svg></div>
-                                <div>
-                                    <div class="contact-info__label">WhatsApp</div>
-                                    <div class="contact-info__value">Escríbanos ahora</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="contact-info__row">
-                            <a href="tel:+18095697499">
-                                <div class="contact-info__icon"><svg class="icon">
-                                        <use href="#i-telefono"></use>
-                                    </svg></div>
-                                <div>
-                                    <div class="contact-info__label">Teléfono</div>
-                                    <div class="contact-info__value">(809) 569-7499</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="contact-info__row">
-                            <a href="mailto:Servicios@ecovatioenergy.com">
-                                <div class="contact-info__icon"><svg class="icon">
-                                        <use href="#i-correo"></use>
-                                    </svg></div>
-                                <div>
-                                    <div class="contact-info__label">Correo</div>
-                                    <div class="contact-info__value">Servicios@ecovatioenergy.com</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="contact-info__row">
-                            <div class="contact-info__icon"><svg class="icon">
-                                    <use href="#i-ubicacion"></use>
-                                </svg></div>
-                            <div>
-                                <div class="contact-info__label">Ubicación</div>
-                                <div class="contact-info__value">Santo Domingo, República Dominicana</div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
             </div>
         </div>
     </section>
@@ -863,7 +881,7 @@
                     <a href="#sistemas">Sistemas</a>
                     <a href="#proyectos">Proyectos</a>
                     <a href="#calculadora">Calculadora</a>
-                    <a href="/pages/historia.html">Nuestra Historia</a>
+                    
                 </div>
             </div>
             <div>

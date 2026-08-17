@@ -21,15 +21,15 @@
       "categoria": "Residencial",
       "paneles": 24,
       "kwp": "13.2",
-      "img": "",
+      "img": "/assets/img/bani.jpg",
       "alt": "Villa con paneles en Bani"
     },
     {
       "ciudad": "San Juan",
       "categoria": "Agrícola",
-      "paneles": 96,
-      "kwp": "52.8",
-      "img": "",
+      "paneles": 48,
+      "kwp": "26.8",
+      "img": "/assets/img/sanjuan.jpg",
       "alt": "Proyecto agrícola en San Juan"
     },
     {
@@ -47,6 +47,15 @@
       "kwp": "5.6",
       "img": "/assets/img/santoDeste.png",
       "alt": "Residencia en Santo Domingo este"
+    },
+
+    {
+      "ciudad": "Santo Domingo Oeste Hato Nuevo",
+      "categoria": "Residencial",
+      "paneles": 10,
+      "kwp": "6.1",
+      "img": "/assets/img/SDO-Hato-Nuevo.png",
+      "alt": "Residencia en Santo Domingo oeste Hato Nuevo"
     }
   ]
 }

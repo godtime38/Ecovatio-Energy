@@ -8,12 +8,12 @@
         {
           "nombre": "Longi Solar",
           "url": "https://www.longi.com/es/",
-          "img": "/assets/img/brands/longi.png"
+          "img": "/assets/img/brands/Loginlogo.svg"
         },
         {
           "nombre": "JA Solar",
           "url": "https://www.jasolar.com/",
-          "img": "/assets/img/brands/ja-solar.png"
+          "img": "/assets/img/brands/JAsolarLogo.png"
         },
         {
           "nombre": "Jinko Solar",
@@ -75,18 +75,14 @@
         {
           "nombre": "Schneider Electric",
           "url": "https://www.se.com/",
-          "img": "/assets/img/brands/schneider-electric.png"
+          "img": "/assets/img/inversores/schneider.svg"
         },
         {
           "nombre": "Suntree",
           "url": "https://www.suntree-electric.com/",
           "img": "/assets/img/brands/suntree.webp"
         },
-        {
-          "nombre": "Tripp Lite",
-          "url": "https://tripplite.eaton.com/",
-          "img": "/assets/img/brands/tripp-lite.png"
-        },
+        
         {
           "nombre": "ABB",
           "url": "https://global.abb/group/es",
@@ -95,12 +91,12 @@
         {
           "nombre": "Eaton",
           "url": "https://www.eaton.com/",
-          "img": "/assets/img/brands/eaton.png"
+          "img": "/assets/img/brands/eaton-logo-small.png"
         },
         {
           "nombre": "Top Cable",
           "url": "https://www.topcable.com/",
-          "img": "/assets/img/brands/top-cable.png"
+          "img": "/assets/img/brands/top-cable.svg"
         }
       ]
     },
