@@ -56,6 +56,15 @@
       "kwp": "6.1",
       "img": "/assets/img/SDO-Hato-Nuevo.png",
       "alt": "Residencia en Santo Domingo oeste Hato Nuevo"
+    },
+
+    {
+      "ciudad": "San Juan Los freezers Premuim",
+      "categoria": "Residencial",
+      "paneles": 22,
+      "kwp": "20.1",
+      "img": "/assets/img/proyectos/SanJuanLosFreezers.jpeg",
+      "alt": "Residencia en San juan"
     }
   ]
 }
