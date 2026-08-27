@@ -73,6 +73,15 @@
       "anio": "2026",
       "images": ["/assets/img/proyectos/san-juan-los-freezers/1.jpg"],
       "alt": "Residencia en San juan"
+    },
+    {
+      "ciudad": "Monte Plata Pueblo Nuevo",
+      "categoria": "Comercial",
+      "paneles": 28,
+      "kwp": "16.80",
+      "anio": "2026",
+      "images": ["/assets/img/proyectos/Monte-plata/1.png", "/assets/img/proyectos/Monte-plata/2.png", "/assets/img/proyectos/Monte-plata/3.png"],
+      "alt": "Residencia en monte plata"
     }
   ]
 }
