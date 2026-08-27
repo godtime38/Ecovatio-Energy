@@ -596,41 +596,165 @@ html.js .reveal.in { animation: rise .7s ease both; opacity: 1; }
 }
 
 /* ---------- Proyectos ---------- */
-.section--towers { position: relative; overflow: hidden; }
-.section--towers > .wrap { position: relative; z-index: 1; }
+.projects-feature {
+    margin-top: 44px;
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    gap: 0;
+    background: var(--brand);
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
 
-.towers-bg {
+.projects-feature__media {
+    position: relative;
+    min-height: 420px;
+    background: var(--brand-2);
+}
+
+.projects-feature__media img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.projects-feature__nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(1, 30, 31, .55);
+    color: #fff;
+    font-size: 20px;
+    line-height: 1;
+    cursor: pointer;
+    backdrop-filter: blur(2px);
+    transition: background .2s;
+}
+
+.projects-feature__nav:hover { background: var(--accent); color: var(--brand); }
+.projects-feature__nav--prev { left: 16px; }
+.projects-feature__nav--next { right: 16px; }
+
+.projects-feature__dots {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 0;
-    line-height: 0;
-    color: var(--accent);
-    pointer-events: none;
-    z-index: 0;
+    bottom: 16px;
+    display: flex;
+    justify-content: center;
+    gap: 7px;
 }
 
-.towers-bg svg { display: block; width: 100%; height: auto; }
+.projects-feature__dot { width: 7px; height: 7px; border-radius: 50%; background: rgba(255, 255, 255, .4); }
+.projects-feature__dot.is-active { background: var(--accent); width: 20px; border-radius: 4px; }
 
-.project-card {
-    position: relative;
-    border-radius: 20px;
+.projects-feature__info {
+    padding: 44px 44px 40px;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+
+.projects-feature__index {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--accent-2);
+    margin-bottom: 14px;
+}
+
+.projects-feature__title { font-size: clamp(24px, 2.4vw, 30px); font-weight: 800; margin: 0 0 14px; }
+.projects-feature__desc { font-size: 14.5px; line-height: 1.7; color: rgba(255, 255, 255, .75); margin: 0; }
+
+.projects-feature__divider { height: 1px; background: rgba(255, 255, 255, .14); margin: 26px 0; }
+
+.projects-feature__stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 16px;
+    margin-bottom: 30px;
+}
+
+.projects-feature__stats span {
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, .5);
+    margin-bottom: 5px;
+}
+
+.projects-feature__stats strong { font-size: 16px; font-weight: 700; color: #fff; }
+.projects-feature__info .btn { margin-top: auto; align-self: flex-start; }
+
+.projects-rail-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: 40px;
+    margin-bottom: 18px;
+}
+
+.projects-rail-label {
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--mut);
+}
+
+.projects-rail-arrows { display: flex; gap: 10px; }
+.projects-rail-arrows .product-pager__arrow { width: 38px; height: 38px; font-size: 14px; }
+
+.projects-rail {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    padding-bottom: 6px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent) transparent;
+}
+
+.projects-rail__item {
+    scroll-snap-align: start;
+    flex: 0 0 220px;
+    text-align: left;
+    background: var(--brand);
+    border: 1.5px solid transparent;
+    border-radius: 16px;
     overflow: hidden;
-    height: 300px;
+    cursor: pointer;
+    padding: 0 0 14px;
+    transition: border-color .2s, transform .2s;
 }
 
-.project-card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .5s; }
-.project-card:hover img { transform: scale(1.05); }
+.projects-rail__item:hover { transform: translateY(-2px); }
+.projects-rail__item.is-active { border-color: var(--accent); }
 
-.project-card__shade {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(180deg, transparent 45%, rgba(1, 30, 31, .9) 100%);
+.projects-rail__thumb { display: block; aspect-ratio: 4 / 3; overflow: hidden; }
+.projects-rail__thumb img { width: 100%; height: 100%; object-fit: cover; }
+
+.projects-rail__num {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--accent-2);
+    padding: 12px 16px 0;
 }
 
-.project-card__body { position: absolute; left: 20px; right: 20px; bottom: 18px; color: #fff; }
-.project-card__city { font-size: 16px; font-weight: 700; }
-.project-card__meta { font-size: 12.5px; color: rgba(255, 255, 255, .75); margin-top: 3px; }
+.projects-rail__city { display: block; font-size: 14.5px; font-weight: 700; color: #fff; padding: 4px 16px 0; }
+.projects-rail__meta { display: block; font-size: 12px; color: rgba(255, 255, 255, .6); padding: 3px 16px 0; }
 
 /* ---------- Calculadora ---------- */
 .calc-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 16px; align-items: stretch; }
@@ -1204,6 +1328,10 @@ a.contact-info__row:hover { background: rgba(255, 255, 255, .06); }
     .product-card { grid-template-columns: 1fr; }
     .footer__grid { grid-template-columns: 1fr; gap: 28px; }
     .footer__bottom { flex-direction: column; align-items: flex-start; }
+
+    .projects-feature { grid-template-columns: 1fr; }
+    .projects-feature__media { min-height: 260px; }
+    .projects-feature__info { padding: 32px 24px; }
 }
 
 @media (max-width: 540px) {
@@ -1211,6 +1339,9 @@ a.contact-info__row:hover { background: rgba(255, 255, 255, .06); }
     .hero__actions .btn { width: 100%; }
     .calc-results__grid { grid-template-columns: 1fr; }
     .seg { flex-direction: column; }
+
+    .projects-feature__stats { grid-template-columns: 1fr; gap: 14px; }
+    .projects-rail__item { flex-basis: 170px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -5,7 +5,8 @@
       "categoria": "Residencial",
       "paneles": 9,
       "kwp": "5.6",
-      "img": "/assets/img/PuntaCana-5.6kwp.jpeg",
+      "anio": "2026",
+      "images": ["/assets/img/proyectos/punta-cana/1.jpg"],
       "alt": "Proyecto residencial en Punta Cana"
     },
     {
@@ -13,7 +14,8 @@
       "categoria": "Residencial",
       "paneles": 50,
       "kwp": "40",
-      "img": "/assets/img/40.kwp.jpeg",
+      "anio": "2026",
+      "images": ["/assets/img/proyectos/santo-domingo-oeste/1.jpg"],
       "alt": "Proyecto residencial en Santo Domingo Oeste"
     },
     {
@@ -21,7 +23,8 @@
       "categoria": "Residencial",
       "paneles": 24,
       "kwp": "13.2",
-      "img": "/assets/img/bani.jpg",
+      "anio": "2026",
+      "images": ["/assets/img/proyectos/bani/1.jpg", "/assets/img/proyectos/bani/2.jpeg", "/assets/img/proyectos/bani/3.jpeg"],
       "alt": "Villa con paneles en Bani"
     },
     {
@@ -29,7 +32,8 @@
       "categoria": "Agrícola",
       "paneles": 48,
       "kwp": "26.8",
-      "img": "/assets/img/sanjuan.jpg",
+      "anio": "2026",
+      "images": ["/assets/img/proyectos/san-juan/1.jpg"],
       "alt": "Proyecto agrícola en San Juan"
     },
     {
@@ -37,7 +41,8 @@
       "categoria": "Comercial",
       "paneles": 45,
       "kwp": "31.9",
-      "img": "/assets/img/ocoa.jpg",
+      "anio": "2026",
+      "images": ["/assets/img/proyectos/ocoa/1.jpg"],
       "alt": "Instalación comercial en Ocoa"
     },
     {
@@ -45,7 +50,8 @@
       "categoria": "Residencial",
       "paneles": 9,
       "kwp": "5.6",
-      "img": "/assets/img/santoDeste.png",
+      "anio": "2026",
+      "images": ["/assets/img/proyectos/santo-domingo-este/1.jpg"],
       "alt": "Residencia en Santo Domingo este"
     },
 
@@ -54,7 +60,8 @@
       "categoria": "Residencial",
       "paneles": 10,
       "kwp": "6.1",
-      "img": "/assets/img/SDO-Hato-Nuevo.png",
+      "anio": "2026",
+      "images": ["/assets/img/proyectos/sdo-hato-nuevo/1.jpg"],
       "alt": "Residencia en Santo Domingo oeste Hato Nuevo"
     },
 
@@ -63,7 +70,8 @@
       "categoria": "Residencial",
       "paneles": 22,
       "kwp": "20.1",
-      "img": "/assets/img/proyectos/SanJuanLosFreezers.jpeg",
+      "anio": "2026",
+      "images": ["/assets/img/proyectos/san-juan-los-freezers/1.jpg"],
       "alt": "Residencia en San juan"
     }
   ]

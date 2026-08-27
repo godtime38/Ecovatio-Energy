@@ -161,9 +161,7 @@
 
     <!-- ================= HERO ================= -->
     <header id="inicio" class="hero">
-        <!-- <video class="hero__video" autoplay muted loop playsinline poster="/assets/img/hero-green.png">
-            <source src="/assets/img/VideoTomaDron.mp4" type="video/mp4">
-        </video> -->
+        
         <video class="hero__video" autoplay muted loop playsinline preload="auto"
             poster="/assets/img/hero-green.webp">
             <source src="/assets/img/banner.MP4" type="video/mp4">
@@ -585,16 +583,22 @@
     <!-- ================= PROYECTOS ================= -->
     <section id="proyectos" class="section">
         <div class="wrap">
-            <div class="eyebrow">Proyectos realizados</div>
-            <h2 class="section-title">Resultados que hablan por nosotros.</h2>
-            <div class="grid-3" id="proyectos-grid" style="margin-top:54px">
-                <!-- Los proyectos se cargan dinámicamente desde /assets/data/proyectos.json -->
+            <div class="eyebrow">Ecovatio Energy · Cartera de proyectos</div>
+            <h2 class="section-title">Energía puesta en obra.</h2>
+
+            <div class="projects-feature" id="projects-feature">
+                <!-- El proyecto destacado se carga dinámicamente desde /assets/data/proyectos.json -->
             </div>
 
-            <div class="product-pager" id="proyectos-pager" hidden>
-                <button class="product-pager__arrow" id="proyectos-prev" aria-label="Página anterior">←</button>
-                <span class="product-pager__status" id="proyectos-page-status">1 / 1</span>
-                <button class="product-pager__arrow" id="proyectos-next" aria-label="Página siguiente">→</button>
+            <div class="projects-rail-head">
+                <span class="projects-rail-label">Cartera completa · desliza el riel</span>
+                <div class="projects-rail-arrows">
+                    <button class="product-pager__arrow" id="projects-rail-prev" aria-label="Ver proyectos anteriores">←</button>
+                    <button class="product-pager__arrow" id="projects-rail-next" aria-label="Ver más proyectos">→</button>
+                </div>
+            </div>
+            <div class="projects-rail" id="projects-rail">
+                <!-- Las miniaturas se cargan dinámicamente desde /assets/data/proyectos.json -->
             </div>
         </div>
     </section>
