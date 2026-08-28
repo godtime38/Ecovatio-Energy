@@ -24,7 +24,7 @@
       "paneles": 24,
       "kwp": "13.2",
       "anio": "2026",
-      "images": ["/assets/img/proyectos/bani/1.jpg", "/assets/img/proyectos/bani/2.jpeg", "/assets/img/proyectos/bani/3.jpeg"],
+      "images": ["/assets/img/proyectos/bani/1.jpg", "/assets/img/proyectos/bani/2.jpeg", "/assets/img/proyectos/bani/3.jpeg", "/assets/img/proyectos/bani/4.jpg"],
       "alt": "Villa con paneles en Bani"
     },
     {
@@ -80,7 +80,7 @@
       "paneles": 28,
       "kwp": "16.80",
       "anio": "2026",
-      "images": ["/assets/img/proyectos/Monte-plata/1.png", "/assets/img/proyectos/Monte-plata/2.png", "/assets/img/proyectos/Monte-plata/3.png"],
+      "images": ["/assets/img/proyectos/Monte-plata/1.png", "/assets/img/proyectos/Monte-plata/2.png", "/assets/img/proyectos/Monte-plata/3.png", "/assets/img/proyectos/Monte-plata/4.png"],
       "alt": "Residencia en monte plata"
     }
   ]
