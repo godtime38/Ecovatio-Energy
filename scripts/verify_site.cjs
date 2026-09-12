@@ -12,6 +12,7 @@ function element(value = '') {
 const ids = Object.fromEntries(['calc-kwh', 'calc-bill', 'calc-monthly', 'calc-yearly', 'calc-roi', 'calc-roi-bar', 'calc-kwh-out', 'calc-bill-out', 'calc-newbill', 'out-kwp', 'out-co2', 'contact-form', 'form-status'].map(id => [id, element()]));
 ids['calc-kwh'].value = '450'; ids['calc-bill'].value = '12000';
 const button = element();
+button.textContent = 'Solicitar asesoría →';
 ids['contact-form'].querySelector = () => button;
 let resets = 0;
 ids['contact-form'].reset = () => resets++;
@@ -25,6 +26,9 @@ const context = {
   setTimeout, console
 };
 vm.runInNewContext(fs.readFileSync('js/script.js', 'utf8'), context);
+const optionalGroup = {open:false};
+ids['contact-form'].listeners.invalid({target:{closest:()=>optionalGroup}});
+assert.equal(optionalGroup.open, true, 'Reveal invalid optional fields before focusing them');
 assert.equal(ids['calc-roi'].textContent, '1.9 años');
 ids['calc-bill'].value = '1000'; ids['calc-bill'].listeners.input();
 assert.equal(ids['calc-roi'].textContent, '23.1 años', 'ROI must not be capped at ten years');
@@ -39,6 +43,7 @@ async function checkForm() {
   assert.equal(payload.values.factura_rd, '1000');
   complete({ok:false}); await new Promise(setImmediate);
   assert.equal(button.disabled, false);
+  assert.equal(button.textContent, 'Solicitar asesoría →');
   assert.equal(resets, 0, 'Preserve input after an error');
   assert.match(ids['form-status'].textContent, /No se pudo enviar/);
   submit(); complete({ok:true}); await new Promise(setImmediate);

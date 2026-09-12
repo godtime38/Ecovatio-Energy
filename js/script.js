@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var sistemasGrid = document.getElementById('sistemas-grid');
 
     if (sistemasFilter && sistemasGrid) {
-        fetch('/assets/data/sistemas.json')
+        fetch('/assets/data/sistemas.json', { cache: 'no-cache' })
             .then(function (res) { return res.json(); })
             .then(function (data) {
                 sistemasGrid.replaceChildren();
@@ -137,11 +137,14 @@ document.addEventListener('DOMContentLoaded', function () {
                     sistemasFilter.appendChild(btn);
 
                     cat.productos.forEach(function (p) {
+                        if (p.publicado === false) return;
                         var card = document.createElement('div');
                         card.className = 'product-card reveal';
                         card.dataset.category = cat.slug;
 
-                        var imgWrap = document.createElement('div');
+                        var imgWrap = document.createElement('a');
+                        imgWrap.href = p.detalle || '#contacto';
+                        imgWrap.setAttribute('aria-label', 'Ver ' + p.titulo);
                         imgWrap.className = 'product-card__img';
                         var img = document.createElement('img');
                         img.src = p.img;
@@ -181,8 +184,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
                         var link = document.createElement('a');
                         link.className = 'product-card__link';
-                        link.href = '#contacto';
-                        link.textContent = 'Solicitar cotización →';
+                        link.href = p.detalle || '#contacto';
+                        link.textContent = p.detalle ? 'Explorar producto →' : 'Solicitar cotización →';
 
                         meta.appendChild(spec);
                         meta.appendChild(link);
@@ -258,143 +261,6 @@ document.addEventListener('DOMContentLoaded', function () {
             })
             .catch(function () {
                 // Keep the static catalog available when the network is unavailable.
-            });
-    }
-
-    /* ---------- Proyectos realizados (desde JSON) ---------- */
-    var projectsFeature = document.getElementById('projects-feature');
-    var projectsRail = document.getElementById('projects-rail');
-
-    if (projectsFeature && projectsRail) {
-        fetch('/assets/data/proyectos.json')
-            .then(function (res) { return res.json(); })
-            .then(function (data) {
-                var proyectos = data.proyectos;
-                var activeIndex = 0;
-                var activeImageIndex = 0;
-
-                function pad(n) { return (n < 10 ? '0' : '') + n; }
-
-                function imagesOf(p) {
-                    return (p.images && p.images.length) ? p.images : [p.img];
-                }
-
-                function describe(p) {
-                    return 'Instalación ' + p.categoria.toLowerCase() + ' de ' + p.kwp + ' kWp con ' +
-                        p.paneles + ' paneles solares en ' + p.ciudad + '.';
-                }
-
-                function renderFeature() {
-                    var p = proyectos[activeIndex];
-                    var images = imagesOf(p);
-                    if (activeImageIndex >= images.length) activeImageIndex = 0;
-
-                    projectsFeature.innerHTML = '';
-
-                    var media = document.createElement('div');
-                    media.className = 'projects-feature__media';
-
-                    var img = document.createElement('img');
-                    img.src = images[activeImageIndex];
-                    img.srcset = images[activeImageIndex].replace('.webp', '-medium.webp') + ' 800w, ' + images[activeImageIndex] + ' 1440w';
-                    img.sizes = '(max-width: 900px) calc(100vw - 40px), 60vw';
-                    img.width = 1440;
-                    img.height = 1080;
-                    img.alt = p.alt || p.ciudad;
-                    img.loading = 'lazy';
-                    media.appendChild(img);
-
-                    if (images.length > 1) {
-                        var prevImg = document.createElement('button');
-                        prevImg.type = 'button';
-                        prevImg.className = 'projects-feature__nav projects-feature__nav--prev';
-                        prevImg.setAttribute('aria-label', 'Foto anterior');
-                        prevImg.innerHTML = '&#8249;';
-                        prevImg.addEventListener('click', function () {
-                            activeImageIndex = (activeImageIndex - 1 + images.length) % images.length;
-                            renderFeature();
-                        });
-
-                        var nextImg = document.createElement('button');
-                        nextImg.type = 'button';
-                        nextImg.className = 'projects-feature__nav projects-feature__nav--next';
-                        nextImg.setAttribute('aria-label', 'Foto siguiente');
-                        nextImg.innerHTML = '&#8250;';
-                        nextImg.addEventListener('click', function () {
-                            activeImageIndex = (activeImageIndex + 1) % images.length;
-                            renderFeature();
-                        });
-
-                        var dots = document.createElement('div');
-                        dots.className = 'projects-feature__dots';
-                        images.forEach(function (_, i) {
-                            var dot = document.createElement('span');
-                            dot.className = 'projects-feature__dot' + (i === activeImageIndex ? ' is-active' : '');
-                            dots.appendChild(dot);
-                        });
-
-                        media.appendChild(prevImg);
-                        media.appendChild(nextImg);
-                        media.appendChild(dots);
-                    }
-
-                    var info = document.createElement('div');
-                    info.className = 'projects-feature__info';
-                    info.innerHTML =
-                        '<div class="projects-feature__index">Proyecto ' + pad(activeIndex + 1) + ' / ' + pad(proyectos.length) + '</div>' +
-                        '<h3 class="projects-feature__title">' + p.ciudad + '</h3>' +
-                        '<p class="projects-feature__desc">' + describe(p) + '</p>' +
-                        '<div class="projects-feature__divider"></div>' +
-                        '<div class="projects-feature__stats">' +
-                        '<div><span>Tecnología</span><strong>' + p.categoria + '</strong></div>' +
-                        '<div><span>Potencia</span><strong>' + p.kwp + ' kWp</strong></div>' +
-                        '<div><span>Ubicación</span><strong>' + p.ciudad + '</strong></div>' +
-                        '<div><span>Puesta en marcha</span><strong>' + (p.anio || '—') + '</strong></div>' +
-                        '</div>' +
-                        '<a href="#contacto" class="btn btn--primary">Solicitar un proyecto similar →</a>';
-
-                    projectsFeature.appendChild(media);
-                    projectsFeature.appendChild(info);
-                }
-
-                function updateRailActive() {
-                    projectsRail.querySelectorAll('.projects-rail__item').forEach(function (el, i) {
-                        el.classList.toggle('is-active', i === activeIndex);
-                    });
-                }
-
-                function renderRail() {
-                    projectsRail.innerHTML = '';
-                    proyectos.forEach(function (p, i) {
-                        var images = imagesOf(p);
-                        var item = document.createElement('button');
-                        item.type = 'button';
-                        item.className = 'projects-rail__item' + (i === activeIndex ? ' is-active' : '');
-                        item.innerHTML =
-                            '<span class="projects-rail__thumb"><img src="' + images[0].replace('.webp', '-thumb.webp') + '" alt="' + (p.alt || p.ciudad) + '" loading="lazy" width="360" height="240"></span>' +
-                            '<span class="projects-rail__num">' + pad(i + 1) + '</span>' +
-                            '<span class="projects-rail__city">' + p.ciudad + '</span>' +
-                            '<span class="projects-rail__meta">' + p.categoria + (p.anio ? ' · ' + p.anio : '') + '</span>';
-                        item.addEventListener('click', function () {
-                            activeIndex = i;
-                            activeImageIndex = 0;
-                            renderFeature();
-                            updateRailActive();
-                        });
-                        projectsRail.appendChild(item);
-                    });
-                }
-
-                var railPrev = document.getElementById('projects-rail-prev');
-                var railNext = document.getElementById('projects-rail-next');
-                if (railPrev) railPrev.addEventListener('click', function () { projectsRail.scrollBy({ left: -300, behavior: 'smooth' }); });
-                if (railNext) railNext.addEventListener('click', function () { projectsRail.scrollBy({ left: 300, behavior: 'smooth' }); });
-
-                renderFeature();
-                renderRail();
-            })
-            .catch(function () {
-                projectsFeature.innerHTML = '<p style="color:var(--mut)">No se pudieron cargar los proyectos en este momento.</p>';
             });
     }
 
@@ -632,11 +498,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (contactForm && formStatus) {
         var submitting = false;
+        contactForm.addEventListener('invalid', function (event) {
+            var group = event.target.closest('details');
+            if (group) group.open = true;
+        }, true);
         contactForm.addEventListener('submit', function (e) {
             e.preventDefault();
             if (submitting) return;
             submitting = true;
             var submitButton = contactForm.querySelector('[type="submit"]');
+            var originalLabel = submitButton.textContent;
             submitButton.disabled = true;
             submitButton.textContent = 'Enviando…';
             contactForm.setAttribute('aria-busy', 'true');
@@ -665,7 +536,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }).finally(function () {
                 submitting = false;
                 submitButton.disabled = false;
-                submitButton.textContent = 'Solicitar cotización →';
+                submitButton.textContent = originalLabel;
                 contactForm.removeAttribute('aria-busy');
             });
         });

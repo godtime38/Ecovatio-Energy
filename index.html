@@ -31,6 +31,9 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="preload" as="image" href="/assets/img/hero-mobile.webp" media="(max-width: 900px)" fetchpriority="high">
     <link rel="preload" as="image" href="/assets/img/hero-green.webp" media="(min-width: 901px)" fetchpriority="high">
+<link rel="stylesheet" href="/css/projects.css">
+<script src="/js/projects.js?v=contact-1" defer></script>
+<link rel="stylesheet" href="/css/contact.css">
 </head>
 
 <body>
@@ -206,35 +209,47 @@
         </div>
     </header>
     <main id="contenido">
-    <section id="proyectos" class="section">
-        <div class="wrap">
-            <div class="eyebrow">Ecovatio Energy · Cartera de proyectos</div>
-            <h2 class="section-title">Energía puesta en obra.</h2>
-
-            <div class="projects-feature" id="projects-feature">
-                <!-- El proyecto destacado se carga dinámicamente desde /assets/data/proyectos.json -->
-            </div>
-
-            <div class="projects-rail-head">
-                <span class="projects-rail-label">Cartera completa · desliza el riel</span>
-                <div class="projects-rail-arrows">
-                    <button class="product-pager__arrow" id="projects-rail-prev" aria-label="Ver proyectos anteriores">←</button>
-                    <button class="product-pager__arrow" id="projects-rail-next" aria-label="Ver más proyectos">→</button>
-                </div>
-            </div>
-            <div class="projects-rail" id="projects-rail">
-                <a class="projects-rail__item" href="#contacto"><span class="projects-rail__thumb"><img src="/assets/img/proyectos/punta-cana/1-thumb.webp" alt="Proyecto residencial en Punta Cana" width="160" height="100" loading="lazy"></span><span class="projects-rail__city">Punta Cana</span><span class="projects-rail__meta">Residencial · 5.6 kWp</span></a>
-<a class="projects-rail__item" href="#contacto"><span class="projects-rail__thumb"><img src="/assets/img/proyectos/santo-domingo-oeste/1-thumb.webp" alt="Proyecto residencial en Santo Domingo Oeste" width="160" height="100" loading="lazy"></span><span class="projects-rail__city">Santo Domingo Oeste</span><span class="projects-rail__meta">Residencial · 40 kWp</span></a>
-<a class="projects-rail__item" href="#contacto"><span class="projects-rail__thumb"><img src="/assets/img/proyectos/bani/1-thumb.webp" alt="Villa con paneles en Bani" width="160" height="100" loading="lazy"></span><span class="projects-rail__city">Bani</span><span class="projects-rail__meta">Residencial · 13.2 kWp</span></a>
-<a class="projects-rail__item" href="#contacto"><span class="projects-rail__thumb"><img src="/assets/img/proyectos/san-juan/1-thumb.webp" alt="Proyecto agrícola en San Juan" width="160" height="100" loading="lazy"></span><span class="projects-rail__city">San Juan</span><span class="projects-rail__meta">Agrícola · 26.8 kWp</span></a>
-<a class="projects-rail__item" href="#contacto"><span class="projects-rail__thumb"><img src="/assets/img/proyectos/ocoa/1-thumb.webp" alt="Instalación comercial en Ocoa" width="160" height="100" loading="lazy"></span><span class="projects-rail__city">San José de Ocoa</span><span class="projects-rail__meta">Comercial · 31.9 kWp</span></a>
-<a class="projects-rail__item" href="#contacto"><span class="projects-rail__thumb"><img src="/assets/img/proyectos/santo-domingo-este/1-thumb.webp" alt="Residencia en Santo Domingo este" width="160" height="100" loading="lazy"></span><span class="projects-rail__city">Santo Domingo este</span><span class="projects-rail__meta">Residencial · 5.6 kWp</span></a>
-<a class="projects-rail__item" href="#contacto"><span class="projects-rail__thumb"><img src="/assets/img/proyectos/sdo-hato-nuevo/1-thumb.webp" alt="Residencia en Santo Domingo oeste Hato Nuevo" width="160" height="100" loading="lazy"></span><span class="projects-rail__city">Santo Domingo Oeste Hato Nuevo</span><span class="projects-rail__meta">Residencial · 6.1 kWp</span></a>
-<a class="projects-rail__item" href="#contacto"><span class="projects-rail__thumb"><img src="/assets/img/proyectos/san-juan-los-freezers/1-thumb.webp" alt="Residencia en San juan" width="160" height="100" loading="lazy"></span><span class="projects-rail__city">San Juan Los freezers Premuim</span><span class="projects-rail__meta">Residencial · 20.1 kWp</span></a>
-<a class="projects-rail__item" href="#contacto"><span class="projects-rail__thumb"><img src="/assets/img/proyectos/Monte-plata/1-thumb.webp" alt="Residencia en monte plata" width="160" height="100" loading="lazy"></span><span class="projects-rail__city">Monte Plata Pueblo Nuevo</span><span class="projects-rail__meta">Comercial · 16.80 kWp</span></a>
-            </div>
-        </div>
-    </section>
+    <section id="proyectos" class="section"><div class="wrap">
+<div class="eyebrow">Proyectos Ecovatio</div><h2 class="section-title">Instalaciones reales.<br>Energía que transforma.</h2>
+<p class="portfolio-lead">Explore nuestros proyectos y encuentre una solución para su hogar o negocio.</p>
+<div class="portfolio-filters" aria-label="Filtrar proyectos" hidden><button type="button" class="portfolio-filter" data-project-filter="Todos" aria-pressed="true">Todos</button><button type="button" class="portfolio-filter" data-project-filter="Residencial" aria-pressed="false">Residencial</button><button type="button" class="portfolio-filter" data-project-filter="Comercial" aria-pressed="false">Comercial</button></div>
+<div class="portfolio-grid"><article class="portfolio-card" data-category="Residencial">
+      <a class="portfolio-cover" href="/proyectos/punta-cana/" aria-label="Ver proyecto en Punta Cana"><img class="portfolio-image" src="/assets/img/proyectos/punta-cana/1.webp" alt="Proyecto residencial en Punta Cana" width="1440" height="1080" loading="lazy" decoding="async"><span class="portfolio-tag">Residencial</span></a>
+      <div class="portfolio-info"><div class="portfolio-heading"><h3>Punta Cana</h3><span>2026</span></div>
+      <p class="portfolio-specs">5,6 kWp instalados <span>·</span> 9 paneles</p>
+      <a class="portfolio-link" href="/proyectos/punta-cana/">Explorar proyecto <span aria-hidden="true">↗</span><span class="sr-only"> en Punta Cana</span></a></div></article><article class="portfolio-card" data-category="Residencial">
+      <a class="portfolio-cover" href="/proyectos/santo-domingo-oeste/" aria-label="Ver proyecto en Santo Domingo Oeste"><img class="portfolio-image" src="/assets/img/proyectos/santo-domingo-oeste/1.webp" alt="Proyecto residencial en Santo Domingo Oeste" width="1440" height="1080" loading="lazy" decoding="async"><span class="portfolio-tag">Residencial</span></a>
+      <div class="portfolio-info"><div class="portfolio-heading"><h3>Santo Domingo Oeste</h3><span>2026</span></div>
+      <p class="portfolio-specs">40 kWp instalados <span>·</span> 50 paneles</p>
+      <a class="portfolio-link" href="/proyectos/santo-domingo-oeste/">Explorar proyecto <span aria-hidden="true">↗</span><span class="sr-only"> en Santo Domingo Oeste</span></a></div></article><article class="portfolio-card" data-category="Residencial">
+      <a class="portfolio-cover" href="/proyectos/bani/" aria-label="Ver proyecto en Bani"><img class="portfolio-image" src="/assets/img/proyectos/bani/1.webp" alt="Villa con paneles en Bani" width="1440" height="1080" loading="lazy" decoding="async"><span class="portfolio-tag">Residencial</span></a>
+      <div class="portfolio-info"><div class="portfolio-heading"><h3>Bani</h3><span>2026</span></div>
+      <p class="portfolio-specs">13,2 kWp instalados <span>·</span> 24 paneles</p>
+      <a class="portfolio-link" href="/proyectos/bani/">Explorar proyecto <span aria-hidden="true">↗</span><span class="sr-only"> en Bani</span></a></div></article><article class="portfolio-card" data-category="Comercial">
+      <a class="portfolio-cover" href="/proyectos/san-juan/" aria-label="Ver proyecto en San Juan"><img class="portfolio-image" src="/assets/img/proyectos/san-juan/1.webp" alt="Proyecto agrícola en San Juan" width="1440" height="1080" loading="lazy" decoding="async"><span class="portfolio-tag">Comercial</span></a>
+      <div class="portfolio-info"><div class="portfolio-heading"><h3>San Juan</h3><span>2026</span></div>
+      <p class="portfolio-specs">26,8 kWp instalados <span>·</span> 48 paneles</p>
+      <a class="portfolio-link" href="/proyectos/san-juan/">Explorar proyecto <span aria-hidden="true">↗</span><span class="sr-only"> en San Juan</span></a></div></article><article class="portfolio-card" data-category="Comercial">
+      <a class="portfolio-cover" href="/proyectos/ocoa/" aria-label="Ver proyecto en San José de Ocoa"><img class="portfolio-image" src="/assets/img/proyectos/ocoa/1.webp" alt="Instalación comercial en Ocoa" width="1440" height="1080" loading="lazy" decoding="async"><span class="portfolio-tag">Comercial</span></a>
+      <div class="portfolio-info"><div class="portfolio-heading"><h3>San José de Ocoa</h3><span>2026</span></div>
+      <p class="portfolio-specs">31,9 kWp instalados <span>·</span> 45 paneles</p>
+      <a class="portfolio-link" href="/proyectos/ocoa/">Explorar proyecto <span aria-hidden="true">↗</span><span class="sr-only"> en San José de Ocoa</span></a></div></article><article class="portfolio-card" data-category="Residencial">
+      <a class="portfolio-cover" href="/proyectos/santo-domingo-este/" aria-label="Ver proyecto en Santo Domingo este"><img class="portfolio-image" src="/assets/img/proyectos/santo-domingo-este/1.webp" alt="Residencia en Santo Domingo este" width="1440" height="1080" loading="lazy" decoding="async"><span class="portfolio-tag">Residencial</span></a>
+      <div class="portfolio-info"><div class="portfolio-heading"><h3>Santo Domingo este</h3><span>2026</span></div>
+      <p class="portfolio-specs">5,6 kWp instalados <span>·</span> 9 paneles</p>
+      <a class="portfolio-link" href="/proyectos/santo-domingo-este/">Explorar proyecto <span aria-hidden="true">↗</span><span class="sr-only"> en Santo Domingo este</span></a></div></article><article class="portfolio-card" data-category="Residencial">
+      <a class="portfolio-cover" href="/proyectos/sdo-hato-nuevo/" aria-label="Ver proyecto en Santo Domingo Oeste Hato Nuevo"><img class="portfolio-image" src="/assets/img/proyectos/sdo-hato-nuevo/1.webp" alt="Residencia en Santo Domingo oeste Hato Nuevo" width="1440" height="1080" loading="lazy" decoding="async"><span class="portfolio-tag">Residencial</span></a>
+      <div class="portfolio-info"><div class="portfolio-heading"><h3>Santo Domingo Oeste Hato Nuevo</h3><span>2026</span></div>
+      <p class="portfolio-specs">6,1 kWp instalados <span>·</span> 10 paneles</p>
+      <a class="portfolio-link" href="/proyectos/sdo-hato-nuevo/">Explorar proyecto <span aria-hidden="true">↗</span><span class="sr-only"> en Santo Domingo Oeste Hato Nuevo</span></a></div></article><article class="portfolio-card" data-category="Residencial">
+      <a class="portfolio-cover" href="/proyectos/san-juan-los-freezers/" aria-label="Ver proyecto en San Juan Los freezers Premuim"><img class="portfolio-image" src="/assets/img/proyectos/san-juan-los-freezers/1.webp" alt="Residencia en San juan" width="1440" height="1080" loading="lazy" decoding="async"><span class="portfolio-tag">Residencial</span></a>
+      <div class="portfolio-info"><div class="portfolio-heading"><h3>San Juan Los freezers Premuim</h3><span>2026</span></div>
+      <p class="portfolio-specs">20,1 kWp instalados <span>·</span> 22 paneles</p>
+      <a class="portfolio-link" href="/proyectos/san-juan-los-freezers/">Explorar proyecto <span aria-hidden="true">↗</span><span class="sr-only"> en San Juan Los freezers Premuim</span></a></div></article><article class="portfolio-card" data-category="Comercial">
+      <a class="portfolio-cover" href="/proyectos/monte-plata/" aria-label="Ver proyecto en Monte Plata Pueblo Nuevo"><img class="portfolio-image" src="/assets/img/proyectos/Monte-plata/1.webp" alt="Residencia en monte plata" width="1440" height="1080" loading="lazy" decoding="async"><span class="portfolio-tag">Comercial</span></a>
+      <div class="portfolio-info"><div class="portfolio-heading"><h3>Monte Plata Pueblo Nuevo</h3><span>2026</span></div>
+      <p class="portfolio-specs">16,80 kWp instalados <span>·</span> 28 paneles</p>
+      <a class="portfolio-link" href="/proyectos/monte-plata/">Explorar proyecto <span aria-hidden="true">↗</span><span class="sr-only"> en Monte Plata Pueblo Nuevo</span></a></div></article></div><p class="portfolio-count" aria-live="polite">9 proyectos</p></div></section>
 
     <!-- ================= PROCESO ================= -->
      <!-- coorecion -->
@@ -582,22 +597,23 @@
             </div>
 
             <div class="product-grid" id="sistemas-grid">
-                <article class="product-card" data-category="paneles"><div class="product-card__img"><img src="/assets/img/paneles/jinko-panel-sin-fondo.webp" alt="Panel solar Jinko" loading="lazy" width="800" height="800"></div><div class="product-card__body"><div class="product-card__tag">Panel solar monofacial Jinko</div><h3 class="product-card__title">Panel Solar Jinko TOPCON</h3><p class="product-card__desc">Tecnología TOPCON de alta eficiencia: células N-Type con un 23,2% de eficiencia para una potencia superior.</p><a class="product-card__link" href="#contacto">Solicitar cotización →</a></div></article>
-<article class="product-card" data-category="paneles"><div class="product-card__img"><img src="/assets/img/paneles/login-paneles.webp" alt="Panel solar Longi Solar" loading="lazy" width="800" height="800"></div><div class="product-card__body"><div class="product-card__tag">Longi Solar</div><h3 class="product-card__title">Paneles Solares Longi Solar</h3><p class="product-card__desc">Paneles monocristalinos de alta eficiencia respaldados por la garantía de fábrica de Longi Solar, uno de los fabricantes líderes a nivel mundial en tecnología fotovoltaica.</p><a class="product-card__link" href="#contacto">Solicitar cotización →</a></div></article>
-<article class="product-card" data-category="paneles"><div class="product-card__img"><img src="/assets/img/paneles/Ja-Solar-Jamt.avif" alt="Panel solar JA Solar" loading="lazy" width="800" height="800"></div><div class="product-card__body"><div class="product-card__tag">JA Solar</div><h3 class="product-card__title">Paneles Solares JA Solar</h3><p class="product-card__desc">Paneles solares de alto rendimiento y durabilidad, fabricados por JA Solar, con presencia y certificaciones internacionales.</p><a class="product-card__link" href="#contacto">Solicitar cotización →</a></div></article>
-<article class="product-card" data-category="baterias"><div class="product-card__img"><img src="/assets/img/baterias/Weco_Residenziali_16K0-LV-1.webp" alt="Batería WeCo 16K0 LV" loading="lazy" width="800" height="800"></div><div class="product-card__body"><div class="product-card__tag">16K0 LV · 16 kWh</div><h3 class="product-card__title">Batería WeCo de bajo voltaje</h3><p class="product-card__desc">Sistema de almacenamiento LiFePO₄ de alta capacidad para energía de respaldo confiable e integración perfecta en instalaciones híbridas.</p><a class="product-card__link" href="#contacto">Solicitar cotización →</a></div></article>
-<article class="product-card" data-category="baterias"><div class="product-card__img"><img src="/assets/img/baterias/pytesBateria.webp" alt="Batería Pytes ESS" loading="lazy" width="800" height="800"></div><div class="product-card__body"><div class="product-card__tag">HV48100</div><h3 class="product-card__title">Batería Pytes ESS</h3><p class="product-card__desc">Sistema de almacenamiento de energía distribuida en gabinete con grado de protección IP20, que integra el paquete de baterías, la caja de control de alto voltaje y el sistema de administración de baterías.</p><a class="product-card__link" href="#contacto">Solicitar cotización →</a></div></article>
-<article class="product-card" data-category="inversores"><div class="product-card__img"><img src="/assets/img/baterias/Weco_Residenziali_XTS.webp" alt="Batería WeCo Serie XTS" loading="lazy" width="800" height="800"></div><div class="product-card__body"><div class="product-card__tag">Ajustar</div><h3 class="product-card__title">Ajustar</h3><p class="product-card__desc">Rendimiento de fase dividida para aplicaciones de 120/240V con mayor potencia, flexibilidad y gestión energética avanzada.</p><a class="product-card__link" href="#contacto">Solicitar cotización →</a></div></article>
-<article class="product-card" data-category="inversores"><div class="product-card__img"><img src="/assets/img/brands/victron-energy.svg" alt="Logo Victron Energy" loading="lazy" width="800" height="800"></div><div class="product-card__body"><div class="product-card__tag">Victron Energy</div><h3 class="product-card__title">Inversores Victron Energy</h3><p class="product-card__desc">Inversores y cargadores de referencia mundial en calidad y confiabilidad, con onda senoidal pura y monitoreo avanzado del sistema.</p><a class="product-card__link" href="#contacto">Solicitar cotización →</a></div></article>
-<article class="product-card" data-category="inversores"><div class="product-card__img"><img src="/assets/img/inversores/deye.webp" alt="Logo Deye" loading="lazy" width="800" height="800"></div><div class="product-card__body"><div class="product-card__tag">Deye</div><h3 class="product-card__title">Inversores Deye</h3><p class="product-card__desc">Inversores híbridos de alto rendimiento con soporte para baterías de litio y gestión inteligente de la energía solar.</p><a class="product-card__link" href="#contacto">Solicitar cotización →</a></div></article>
-<article class="product-card" data-category="inversores"><div class="product-card__img"><img src="/assets/img/inversores/inversorsoli.webp" alt="Logo Solis" loading="lazy" width="800" height="800"></div><div class="product-card__body"><div class="product-card__tag">S5-GC(50-60)K-LV</div><h3 class="product-card__title">Inversores Solis</h3><p class="product-card__desc">El S5-GC(50-60)K-LV es una nueva generación de productos trifásicos de 220v. Es uno de los inversores trifásicos en cadena de baja tensión más potentes del mundo. </p><a class="product-card__link" href="#contacto">Solicitar cotización →</a></div></article>
-<article class="product-card" data-category="inversores"><div class="product-card__img"><img src="/assets/img/inversores/invHuawaei.webp" alt="Logo Huawei" loading="lazy" width="800" height="800"></div><div class="product-card__body"><div class="product-card__tag">SUN2000-5/6/8/10/12K-MAP0</div><h3 class="product-card__title">Inversores Huawei</h3><p class="product-card__desc">El potente inversor mantiene activos más electrodomésticos con mayor autosuficiencia con energía verde y facturas de electricidad más bajas. El nuevo inversor MAP0 admite sistema de almacenamiento de energía. Pásate a la energía verde con menos inversores.</p><a class="product-card__link" href="#contacto">Solicitar cotización →</a></div></article>
-<article class="product-card" data-category="estructuras"><div class="product-card__img"><img src="/assets/img/Schletter/Tejado-inclinado.webp" alt="Estructura Schletter para tejado inclinado" loading="lazy" width="800" height="800"></div><div class="product-card__body"><div class="product-card__tag">Tejado Inclinado</div><h3 class="product-card__title">Estructuras de Montaje Schletter</h3><p class="product-card__desc">Sistemas de montaje construidos para durar: tejado inclinado, tejado plano, fachada y estructuras de suelo, adaptados a cada tipo de instalación.</p><a class="product-card__link" href="#contacto">Solicitar cotización →</a></div></article>
-<article class="product-card" data-category="estructuras"><div class="product-card__img"><img src="/assets/img/Schletter/Tejado-plano.webp" alt="Estructura Schletter para tejado plano" loading="lazy" width="800" height="800"></div><div class="product-card__body"><div class="product-card__tag">Schletter</div><h3 class="product-card__title">Tejado Plano.</h3><p class="product-card__desc">Sistemas de montaje construidos para durar: tejado inclinado, tejado plano, fachada y estructuras de suelo, adaptados a cada tipo de instalación.</p><a class="product-card__link" href="#contacto">Solicitar cotización →</a></div></article>
-<article class="product-card" data-category="estructuras"><div class="product-card__img"><img src="/assets/img/Schletter/Inclinacion-fija.webp" alt="Estructura Schletter de inclinación fija" loading="lazy" width="800" height="800"></div><div class="product-card__body"><div class="product-card__tag">Schletter</div><h3 class="product-card__title">Inclinacion Fija.</h3><p class="product-card__desc">Sistemas de montaje construidos para durar: tejado inclinado, tejado plano, fachada y estructuras de suelo, adaptados a cada tipo de instalación.</p><a class="product-card__link" href="#contacto">Solicitar cotización →</a></div></article>
-<article class="product-card" data-category="estructuras"><div class="product-card__img"><img src="/assets/img/Schletter/Seguimiento-solar.webp" alt="Estructura Schletter con seguimiento solar" loading="lazy" width="800" height="800"></div><div class="product-card__body"><div class="product-card__tag">Schletter</div><h3 class="product-card__title">Seguimiento Solar.</h3><p class="product-card__desc">Sistemas de montaje construidos para durar: tejado inclinado, tejado plano, fachada y estructuras de suelo, adaptados a cada tipo de instalación.</p><a class="product-card__link" href="#contacto">Solicitar cotización →</a></div></article>
-<article class="product-card" data-category="estructuras"><div class="product-card__img"><img src="/assets/img/Schletter/Agrovoltaico.webp" alt="Estructura Schletter agrovoltaica" loading="lazy" width="800" height="800"></div><div class="product-card__body"><div class="product-card__tag">Schletter</div><h3 class="product-card__title">Agrovoltaico.</h3><p class="product-card__desc">Sistemas de montaje construidos para durar: tejado inclinado, tejado plano, fachada y estructuras de suelo, adaptados a cada tipo de instalación.</p><a class="product-card__link" href="#contacto">Solicitar cotización →</a></div></article>
-            </div>
+<article class="product-card" data-category="paneles"><a class="product-card__img" href="/sistemas/panel-solar-jinko-topcon-panel-solar-monofacial-jinko/" aria-label="Ver Panel Solar Jinko TOPCON"><img src="/assets/img/paneles/jinko-panel-sin-fondo.webp" alt="Panel solar Jinko" loading="lazy" width="800" height="800"></a><div class="product-card__body"><div class="product-card__tag">Panel solar monofacial Jinko</div><h3 class="product-card__title">Panel Solar Jinko TOPCON</h3><p class="product-card__desc">Tecnología TOPCON de alta eficiencia: células N-Type con un 23,2% de eficiencia para una potencia superior.</p><a class="product-card__link" href="/sistemas/panel-solar-jinko-topcon-panel-solar-monofacial-jinko/">Explorar producto →</a></div></article>
+<article class="product-card" data-category="paneles"><a class="product-card__img" href="/sistemas/paneles-solares-longi-solar-longi-solar/" aria-label="Ver Paneles Solares Longi Solar"><img src="/assets/img/paneles/login-paneles.webp" alt="Panel solar Longi Solar" loading="lazy" width="800" height="800"></a><div class="product-card__body"><div class="product-card__tag">Longi Solar</div><h3 class="product-card__title">Paneles Solares Longi Solar</h3><p class="product-card__desc">Paneles monocristalinos de alta eficiencia respaldados por la garantía de fábrica de Longi Solar, uno de los fabricantes líderes a nivel mundial en tecnología fotovoltaica.</p><a class="product-card__link" href="/sistemas/paneles-solares-longi-solar-longi-solar/">Explorar producto →</a></div></article>
+<article class="product-card" data-category="paneles"><a class="product-card__img" href="/sistemas/paneles-solares-ja-solar-ja-solar/" aria-label="Ver Paneles Solares JA Solar"><img src="/assets/img/paneles/Ja-Solar-Jamt.avif" alt="Panel solar JA Solar" loading="lazy" width="800" height="800"></a><div class="product-card__body"><div class="product-card__tag">JA Solar</div><h3 class="product-card__title">Paneles Solares JA Solar</h3><p class="product-card__desc">Paneles solares de alto rendimiento y durabilidad, fabricados por JA Solar, con presencia y certificaciones internacionales.</p><a class="product-card__link" href="/sistemas/paneles-solares-ja-solar-ja-solar/">Explorar producto →</a></div></article>
+<article class="product-card" data-category="baterias"><a class="product-card__img" href="/sistemas/bateria-weco-de-bajo-voltaje-16k0-lv-16-kwh/" aria-label="Ver Batería WeCo de bajo voltaje"><img src="/assets/img/baterias/Weco_Residenziali_16K0-LV-1.webp" alt="Batería WeCo 16K0 LV" loading="lazy" width="800" height="800"></a><div class="product-card__body"><div class="product-card__tag">16K0 LV · 16 kWh</div><h3 class="product-card__title">Batería WeCo de bajo voltaje</h3><p class="product-card__desc">Sistema de almacenamiento LiFePO₄ de alta capacidad para energía de respaldo confiable e integración perfecta en instalaciones híbridas.</p><a class="product-card__link" href="/sistemas/bateria-weco-de-bajo-voltaje-16k0-lv-16-kwh/">Explorar producto →</a></div></article>
+<article class="product-card" data-category="baterias"><a class="product-card__img" href="/sistemas/bateria-pytes-ess-hv48100/" aria-label="Ver Batería Pytes ESS"><img src="/assets/img/baterias/pytesBateria.webp" alt="Batería Pytes ESS" loading="lazy" width="800" height="800"></a><div class="product-card__body"><div class="product-card__tag">HV48100</div><h3 class="product-card__title">Batería Pytes ESS</h3><p class="product-card__desc">Sistema de almacenamiento de energía distribuida en gabinete con grado de protección IP20, que integra el paquete de baterías, la caja de control de alto voltaje y el sistema de administración de baterías.</p><a class="product-card__link" href="/sistemas/bateria-pytes-ess-hv48100/">Explorar producto →</a></div></article>
+<article class="product-card" data-category="inversores"><a class="product-card__img" href="/sistemas/inversores-victron-energy-victron-energy/" aria-label="Ver Inversores Victron Energy"><img src="/assets/img/brands/victron-energy.svg" alt="Logo Victron Energy" loading="lazy" width="800" height="800"></a><div class="product-card__body"><div class="product-card__tag">Victron Energy</div><h3 class="product-card__title">Inversores Victron Energy</h3><p class="product-card__desc">Inversores y cargadores de referencia mundial en calidad y confiabilidad, con onda senoidal pura y monitoreo avanzado del sistema.</p><a class="product-card__link" href="/sistemas/inversores-victron-energy-victron-energy/">Explorar producto →</a></div></article>
+<article class="product-card" data-category="inversores"><a class="product-card__img" href="/sistemas/inversores-deye-deye/" aria-label="Ver Inversores Deye"><img src="/assets/img/inversores/deye.webp" alt="Logo Deye" loading="lazy" width="800" height="800"></a><div class="product-card__body"><div class="product-card__tag">Deye</div><h3 class="product-card__title">Inversores Deye</h3><p class="product-card__desc">Inversores híbridos de alto rendimiento con soporte para baterías de litio y gestión inteligente de la energía solar.</p><a class="product-card__link" href="/sistemas/inversores-deye-deye/">Explorar producto →</a></div></article>
+<article class="product-card" data-category="inversores"><a class="product-card__img" href="/sistemas/inversores-solis-s5-gc-50-60-k-lv/" aria-label="Ver Inversores Solis"><img src="/assets/img/inversores/inversorsoli.webp" alt="Logo Solis" loading="lazy" width="800" height="800"></a><div class="product-card__body"><div class="product-card__tag">S5-GC(50-60)K-LV</div><h3 class="product-card__title">Inversores Solis</h3><p class="product-card__desc">El S5-GC(50-60)K-LV es una nueva generación de productos trifásicos de 220v. Es uno de los inversores trifásicos en cadena de baja tensión más potentes del mundo. </p><a class="product-card__link" href="/sistemas/inversores-solis-s5-gc-50-60-k-lv/">Explorar producto →</a></div></article>
+<article class="product-card" data-category="inversores"><a class="product-card__img" href="/sistemas/inversores-huawei-sun2000-5-6-8-10-12k-map0/" aria-label="Ver Inversores Huawei"><img src="/assets/img/inversores/invHuawaei.webp" alt="Logo Huawei" loading="lazy" width="800" height="800"></a><div class="product-card__body"><div class="product-card__tag">SUN2000-5/6/8/10/12K-MAP0</div><h3 class="product-card__title">Inversores Huawei</h3><p class="product-card__desc">El potente inversor mantiene activos más electrodomésticos con mayor autosuficiencia con energía verde y facturas de electricidad más bajas. El nuevo inversor MAP0 admite sistema de almacenamiento de energía. Pásate a la energía verde con menos inversores.</p><a class="product-card__link" href="/sistemas/inversores-huawei-sun2000-5-6-8-10-12k-map0/">Explorar producto →</a></div></article>
+<article class="product-card" data-category="estructuras"><a class="product-card__img" href="/sistemas/estructuras-de-montaje-schletter-tejado-inclinado/" aria-label="Ver Estructuras de Montaje Schletter"><img src="/assets/img/Schletter/Tejado-inclinado.webp" alt="Estructura Schletter para tejado inclinado" loading="lazy" width="800" height="800"></a><div class="product-card__body"><div class="product-card__tag">Tejado Inclinado</div><h3 class="product-card__title">Estructuras de Montaje Schletter</h3><p class="product-card__desc">Sistemas de montaje construidos para durar: tejado inclinado, tejado plano, fachada y estructuras de suelo, adaptados a cada tipo de instalación.</p><a class="product-card__link" href="/sistemas/estructuras-de-montaje-schletter-tejado-inclinado/">Explorar producto →</a></div></article>
+<article class="product-card" data-category="estructuras"><a class="product-card__img" href="/sistemas/tejado-plano-schletter/" aria-label="Ver Tejado Plano."><img src="/assets/img/Schletter/Tejado-plano.webp" alt="Estructura Schletter para tejado plano" loading="lazy" width="800" height="800"></a><div class="product-card__body"><div class="product-card__tag">Schletter</div><h3 class="product-card__title">Tejado Plano.</h3><p class="product-card__desc">Sistemas de montaje construidos para durar: tejado inclinado, tejado plano, fachada y estructuras de suelo, adaptados a cada tipo de instalación.</p><a class="product-card__link" href="/sistemas/tejado-plano-schletter/">Explorar producto →</a></div></article>
+<article class="product-card" data-category="estructuras"><a class="product-card__img" href="/sistemas/inclinacion-fija-schletter/" aria-label="Ver Inclinacion Fija."><img src="/assets/img/Schletter/Inclinacion-fija.webp" alt="Estructura Schletter de inclinación fija" loading="lazy" width="800" height="800"></a><div class="product-card__body"><div class="product-card__tag">Schletter</div><h3 class="product-card__title">Inclinacion Fija.</h3><p class="product-card__desc">Sistemas de montaje construidos para durar: tejado inclinado, tejado plano, fachada y estructuras de suelo, adaptados a cada tipo de instalación.</p><a class="product-card__link" href="/sistemas/inclinacion-fija-schletter/">Explorar producto →</a></div></article>
+<article class="product-card" data-category="estructuras"><a class="product-card__img" href="/sistemas/seguimiento-solar-schletter/" aria-label="Ver Seguimiento Solar."><img src="/assets/img/Schletter/Seguimiento-solar.webp" alt="Estructura Schletter con seguimiento solar" loading="lazy" width="800" height="800"></a><div class="product-card__body"><div class="product-card__tag">Schletter</div><h3 class="product-card__title">Seguimiento Solar.</h3><p class="product-card__desc">Sistemas de montaje construidos para durar: tejado inclinado, tejado plano, fachada y estructuras de suelo, adaptados a cada tipo de instalación.</p><a class="product-card__link" href="/sistemas/seguimiento-solar-schletter/">Explorar producto →</a></div></article>
+<article class="product-card" data-category="estructuras"><a class="product-card__img" href="/sistemas/agrovoltaico-schletter/" aria-label="Ver Agrovoltaico."><img src="/assets/img/Schletter/Agrovoltaico.webp" alt="Estructura Schletter agrovoltaica" loading="lazy" width="800" height="800"></a><div class="product-card__body"><div class="product-card__tag">Schletter</div><h3 class="product-card__title">Agrovoltaico.</h3><p class="product-card__desc">Sistemas de montaje construidos para durar: tejado inclinado, tejado plano, fachada y estructuras de suelo, adaptados a cada tipo de instalación.</p><a class="product-card__link" href="/sistemas/agrovoltaico-schletter/">Explorar producto →</a></div></article>
+</div>
+
+
 
             <div class="product-pager" id="sistemas-pager" hidden>
                 <button class="product-pager__arrow" id="sistemas-prev" aria-label="Página anterior">←</button>
@@ -784,107 +800,35 @@
     </section>
 
     <!-- ================= CONTACTO ================= -->
-    <section id="contacto" class="section">
-        <div class="wrap">
-            <div class="eyebrow eyebrow--dash">Contacto</div>
-            <h2 class="section-title">Empiece a ahorrar<br><span class="section-title__accent">hoy mismo.</span></h2>
-            <p class="contact-lede">Cotización sin compromiso. Un ingeniero revisa su consumo y le dice exactamente
-                cuánto puede ahorrar.</p>
-            <div class="contact-grid" style="margin-top:54px">
-                <div class="contact-side">
-                    <div class="contact-info">
-                        <a class="contact-info__row" href="https://wa.me/message/S7ORWACDSX3UG1" target="_blank"
-                            rel="noopener">
-                            <span class="contact-info__label">WhatsApp</span>
-                            <span class="contact-info__value">Escríbanos ahora →</span>
-                        </a>
-                        <a class="contact-info__row" href="tel:+18095697499">
-                            <span class="contact-info__label">Teléfono</span>
-                            <span class="contact-info__value">(809) 569-7499</span>
-                        </a>
-                        <a class="contact-info__row" href="mailto:servicios@ecovatioenergy.com">
-                            <span class="contact-info__label">Correo</span>
-                            <span class="contact-info__value">servicios@ecovatioenergy.com</span>
-                        </a>
-                        <div class="contact-info__row">
-                            <span class="contact-info__label">Ubicación</span>
-                            <span class="contact-info__value">Santo Domingo, R.D.</span>
-                        </div>
-                        <div class="contact-stats">
-                            <!-- <div class="contact-stats__item">
-                                <div class="contact-stats__num">24 h</div>
-                                <div class="contact-stats__label">Respuesta</div>
-                            </div>
-                            <div class="contact-stats__item">
-                                <div class="contact-stats__num">+180</div>
-                                <div class="contact-stats__label">Instalaciones</div>
-                            </div>
-                            <div class="contact-stats__item">
-                                <div class="contact-stats__num">25 años</div>
-                                <div class="contact-stats__label">Garantía</div>
-                            </div> -->
-                        </div>
-                    </div>
-                </div>
-                <form id="contact-form" class="contact-form" action="https://formspree.io/f/mykdnndz" method="POST">
-                    <div class="contact-form__head">
-                        <h3 class="contact-form__title">Solicite su cotización</h3>
-                        <span class="badge">Gratis</span>
-                    </div>
-                    <div class="contact-form__grid">
-                        <label class="field"><span>Nombre</span><input type="text" name="nombre" autocomplete="name" placeholder="Su nombre"
-                                required></label>
-                        <label class="field"><span>Empresa (opcional)</span><input type="text" name="empresa" autocomplete="organization"
-                                placeholder="Nombre de la empresa"></label>
-                        <label class="field"><span>Teléfono</span><input type="tel" name="telefono" autocomplete="tel"
-                                placeholder="(809) 000-0000" required></label>
-                        <label class="field"><span>Correo</span><input type="email" name="correo" autocomplete="email"
-                                placeholder="nombre@correo.com"></label>
-                        <div class="field field--full">
-                            <span>Provincia</span>
-                            <div class="pill-group">
-                                <label class="pill"><input type="radio" name="provincia" value="Santo Domingo"
-                                        checked><span>Santo Domingo</span></label>
-                                <label class="pill"><input type="radio" name="provincia"
-                                        value="Distrito Nacional"><span>Distrito Nacional</span></label>
-                                <label class="pill"><input type="radio" name="provincia"
-                                        value="Santiago"><span>Santiago</span></label>
-                                <label class="pill"><input type="radio" name="provincia"
-                                        value="La Altagracia"><span>La Altagracia</span></label>
-                                <label class="pill"><input type="radio" name="provincia"
-                                        value="San Cristóbal"><span>San Cristóbal</span></label>
-                                <label class="pill"><input type="radio" name="provincia"
-                                        value="Puerto Plata"><span>Puerto Plata</span></label>
-                                <label class="pill"><input type="radio" name="provincia"
-                                        value="La Vega"><span>La Vega</span></label>
-                                <label class="pill"><input type="radio" name="provincia"
-                                        value="Otra"><span>Otra</span></label>
-                            </div>
-                        </div>
-                        <div class="field field--full">
-                            <span>Consumo mensual estimado</span>
-                            <div class="pill-group">
-                                <label class="pill"><input type="radio" name="consumo"
-                                        value="Menos de RD$5,000"><span>Menos de RD$5,000</span></label>
-                                <label class="pill"><input type="radio" name="consumo"
-                                        value="RD$5,000 – 15,000"><span>RD$5,000 – 15,000</span></label>
-                                <label class="pill"><input type="radio" name="consumo"
-                                        value="RD$15,000 – 40,000"><span>RD$15,000 – 40,000</span></label>
-                                <label class="pill"><input type="radio" name="consumo"
-                                        value="Más de RD$40,000"><span>Más de RD$40,000</span></label>
-                            </div>
-                        </div>
-                        <label class="field field--full"><span>Mensaje (opcional)</span><textarea name="mensaje" rows="4"
-                                placeholder="Cuéntenos sobre su proyecto"></textarea></label>
-                    </div>
-                    <div class="contact-form__footer">
-                        <p class="contact-form__privacy">Usamos sus datos para atender su solicitud. <a href="/pages/privacidad.html">Cómo tratamos sus datos</a>.</p>
-                        <button type="submit" class="btn btn--dark">Solicitar cotización →</button>
-                    </div>
-                    <div id="form-status" class="form-status" role="status" aria-live="polite" aria-atomic="true">✓ Datos recibidos exitosamente. Le contactaremos pronto.
-                    </div>
-                </form>
+    <section id="contacto" class="section ec-contact" aria-labelledby="contact-heading">
+        <div class="wrap ec-contact-layout">
+            <div class="ec-contact-aside">
+                <p class="ec-contact-eyebrow">Hablemos de su proyecto</p>
+                <h2 id="contact-heading">Su próximo paso<br>hacia el <span>ahorro.</span></h2>
+                <p class="ec-contact-description">Cuéntenos qué necesita. Le ayudamos a encontrar una solución solar para su hogar o negocio.</p>
+                <ul class="ec-contact-benefits"><li>Cotización sin compromiso</li><li>Evaluación de su consumo</li><li>Asesoría para elegir sus equipos</li></ul>
+                <a class="ec-contact-wa" href="https://wa.me/message/S7ORWACDSX3UG1" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp"></use></svg>Prefiero hablar por WhatsApp <span aria-hidden="true">↗</span></a>
+                <div class="ec-contact-direct"><p>También puede contactarnos</p><a class="ec-contact-phone" href="tel:+18095697499">(809) 569-7499</a><a href="mailto:servicios@ecovatioenergy.com">servicios@ecovatioenergy.com</a><p>Santo Domingo, República Dominicana<br>Lun–Vie · 8:00 a. m. – 6:00 p. m.<br>Sábado · 8:00 a. m. – 1:00 p. m.</p></div>
             </div>
+            <form id="contact-form" class="ec-contact-form" action="https://formspree.io/f/mykdnndz" method="POST">
+                <h3>¿Cómo podemos ayudarle?</h3><p class="ec-contact-subtitle">Déjenos sus datos para conversar sobre su proyecto.</p>
+                <div id="contact-context"></div>
+                <div class="ec-contact-fields">
+                    <label>Nombre <span aria-hidden="true">*</span><input name="nombre" autocomplete="name" placeholder="Su nombre" required maxlength="120"></label>
+                    <label>Teléfono <span aria-hidden="true">*</span><input type="tel" name="telefono" autocomplete="tel" placeholder="(809) 000-0000" required maxlength="40"></label>
+                    <label class="ec-contact-full">¿Qué necesita? <span aria-hidden="true">*</span><select name="interes" required><option value="">Seleccione una opción</option><option value="producto">Información sobre un producto</option><option value="residencial">Instalación para mi hogar</option><option value="comercial">Instalación para mi negocio</option><option value="mantenimiento">Mantenimiento o revisión</option><option value="asesoria">Asesoría para elegir un sistema</option></select></label>
+                    <label class="ec-contact-full">Provincia <span aria-hidden="true">*</span><select name="provincia" required><option value="">Seleccione su provincia</option><option>Santo Domingo</option><option>Distrito Nacional</option><option>Santiago</option><option>La Altagracia</option><option>San Cristóbal</option><option>Puerto Plata</option><option>La Vega</option><option>Otra provincia</option></select></label>
+                    <label class="ec-contact-full">Cuéntenos un poco más <span class="ec-contact-optional">(opcional)</span><textarea name="mensaje" rows="3" maxlength="3000" placeholder="Por ejemplo: quiero respaldo para mi casa durante los apagones."></textarea></label>
+                </div>
+                <details class="ec-contact-extras"><summary>Agregar correo, empresa o consumo <span>(opcional)</span></summary><div class="ec-contact-fields">
+                    <label>Correo<input type="email" name="correo" autocomplete="email" placeholder="nombre@correo.com" maxlength="254"></label>
+                    <label>Empresa<input name="empresa" autocomplete="organization" placeholder="Nombre de su empresa" maxlength="160"></label>
+                    <label class="ec-contact-full">Factura mensual aproximada<select name="consumo"><option value="">Seleccione un rango</option><option>Menos de RD$5,000</option><option>RD$5,000 – 15,000</option><option>RD$15,000 – 40,000</option><option>Más de RD$40,000</option></select></label>
+                </div></details>
+                <button type="submit" class="ec-contact-submit">Solicitar asesoría →</button>
+                <p class="ec-contact-privacy">Los campos con * son obligatorios. Usamos sus datos para atender esta consulta. <a href="/pages/privacidad.html">Cómo tratamos sus datos</a>.</p>
+                <div id="form-status" class="form-status" role="status" aria-live="polite" aria-atomic="true"></div>
+            </form>
         </div>
     </section>
 
@@ -955,7 +899,7 @@
         </a>
     </div>
 
-    <script src="/js/script.js"></script>
+    <script src="/js/script.js?v=contact-1"></script>
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",

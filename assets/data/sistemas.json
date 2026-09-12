@@ -11,7 +11,13 @@
           "descripcion": "Tecnología TOPCON de alta eficiencia: células N-Type con un 23,2% de eficiencia para una potencia superior.",
           "spec": "Paneles, Energía limpia",
           "img": "/assets/img/paneles/jinko-panel-sin-fondo.webp",
-          "alt": "Panel solar Jinko"
+          "alt": "Panel solar Jinko",
+          "slug": "panel-solar-jinko-topcon-panel-solar-monofacial-jinko",
+          "detalle": "/sistemas/panel-solar-jinko-topcon-panel-solar-monofacial-jinko/",
+          "especificaciones": {
+            "Tecnología": "TOPCON · células N-Type",
+            "Eficiencia indicada en el catálogo": "23,2%"
+          }
         },
         {
           "tag": "Longi Solar",
@@ -19,7 +25,9 @@
           "descripcion": "Paneles monocristalinos de alta eficiencia respaldados por la garantía de fábrica de Longi Solar, uno de los fabricantes líderes a nivel mundial en tecnología fotovoltaica.",
           "spec": "Paneles · Alta eficiencia",
           "img": "/assets/img/paneles/login-paneles.webp",
-          "alt": "Panel solar Longi Solar"
+          "alt": "Panel solar Longi Solar",
+          "slug": "paneles-solares-longi-solar-longi-solar",
+          "detalle": "/sistemas/paneles-solares-longi-solar-longi-solar/"
         },
         {
           "tag": "JA Solar",
@@ -27,7 +35,9 @@
           "descripcion": "Paneles solares de alto rendimiento y durabilidad, fabricados por JA Solar, con presencia y certificaciones internacionales.",
           "spec": "Paneles · Alto rendimiento",
           "img": "/assets/img/paneles/Ja-Solar-Jamt.avif",
-          "alt": "Panel solar JA Solar"
+          "alt": "Panel solar JA Solar",
+          "slug": "paneles-solares-ja-solar-ja-solar",
+          "detalle": "/sistemas/paneles-solares-ja-solar-ja-solar/"
         }
       ]
     },
@@ -42,7 +52,14 @@
           "descripcion": "Sistema de almacenamiento LiFePO₄ de alta capacidad para energía de respaldo confiable e integración perfecta en instalaciones híbridas.",
           "spec": "Litio LiFePO4 de larga vida",
           "img": "/assets/img/baterias/Weco_Residenziali_16K0-LV-1.webp",
-          "alt": "Batería WeCo 16K0 LV"
+          "alt": "Batería WeCo 16K0 LV",
+          "slug": "bateria-weco-de-bajo-voltaje-16k0-lv-16-kwh",
+          "detalle": "/sistemas/bateria-weco-de-bajo-voltaje-16k0-lv-16-kwh/",
+          "especificaciones": {
+            "Referencia": "16K0 LV",
+            "Capacidad indicada en el catálogo": "16 kWh",
+            "Química": "LiFePO₄"
+          }
         },
         {
           "tag": "HV48100",
@@ -50,9 +67,15 @@
           "descripcion": "Sistema de almacenamiento de energía distribuida en gabinete con grado de protección IP20, que integra el paquete de baterías, la caja de control de alto voltaje y el sistema de administración de baterías.",
           "spec": "energía de emergencia",
           "img": "/assets/img/baterias/pytesBateria.webp",
-          "alt": "Batería Pytes ESS"
+          "alt": "Batería Pytes ESS",
+          "slug": "bateria-pytes-ess-hv48100",
+          "detalle": "/sistemas/bateria-pytes-ess-hv48100/",
+          "especificaciones": {
+            "Referencia": "HV48100",
+            "Protección indicada": "IP20",
+            "Componentes descritos": "Baterías, caja de control de alto voltaje y sistema de administración"
+          }
         }
-        
       ]
     },
     {
@@ -66,16 +89,18 @@
           "descripcion": "Rendimiento de fase dividida para aplicaciones de 120/240V con mayor potencia, flexibilidad y gestión energética avanzada.",
           "spec": "Control y respaldo sin interrupciones",
           "img": "/assets/img/baterias/Weco_Residenziali_XTS.webp",
-          "alt": "Batería WeCo Serie XTS"
+          "alt": "Batería WeCo Serie XTS",
+          "publicado": false
         },
-        
         {
           "tag": "Victron Energy",
           "titulo": "Inversores Victron Energy",
           "descripcion": "Inversores y cargadores de referencia mundial en calidad y confiabilidad, con onda senoidal pura y monitoreo avanzado del sistema.",
           "spec": "Inversores · Calidad premium",
           "img": "/assets/img/brands/victron-energy.svg",
-          "alt": "Logo Victron Energy"
+          "alt": "Logo Victron Energy",
+          "slug": "inversores-victron-energy-victron-energy",
+          "detalle": "/sistemas/inversores-victron-energy-victron-energy/"
         },
         {
           "tag": "Deye",
@@ -83,7 +108,9 @@
           "descripcion": "Inversores híbridos de alto rendimiento con soporte para baterías de litio y gestión inteligente de la energía solar.",
           "spec": "Inversores · Híbridos",
           "img": "/assets/img/inversores/deye.webp",
-          "alt": "Logo Deye"
+          "alt": "Logo Deye",
+          "slug": "inversores-deye-deye",
+          "detalle": "/sistemas/inversores-deye-deye/"
         },
         {
           "tag": "S5-GC(50-60)K-LV",
@@ -91,7 +118,14 @@
           "descripcion": "El S5-GC(50-60)K-LV es una nueva generación de productos trifásicos de 220v. Es uno de los inversores trifásicos en cadena de baja tensión más potentes del mundo. ",
           "spec": "Inversores · Presencia global",
           "img": "/assets/img/inversores/inversorsoli.webp",
-          "alt": "Logo Solis"
+          "alt": "Logo Solis",
+          "slug": "inversores-solis-s5-gc-50-60-k-lv",
+          "detalle": "/sistemas/inversores-solis-s5-gc-50-60-k-lv/",
+          "especificaciones": {
+            "Serie": "S5-GC(50-60)K-LV",
+            "Configuración descrita": "Trifásico",
+            "Tensión indicada en el catálogo": "220 V"
+          }
         },
         {
           "tag": "SUN2000-5/6/8/10/12K-MAP0",
@@ -99,7 +133,13 @@
           "descripcion": "El potente inversor mantiene activos más electrodomésticos con mayor autosuficiencia con energía verde y facturas de electricidad más bajas. El nuevo inversor MAP0 admite sistema de almacenamiento de energía. Pásate a la energía verde con menos inversores.",
           "spec": "Inversores · Presencia global",
           "img": "/assets/img/inversores/invHuawaei.webp",
-          "alt": "Logo Huawei"
+          "alt": "Logo Huawei",
+          "slug": "inversores-huawei-sun2000-5-6-8-10-12k-map0",
+          "detalle": "/sistemas/inversores-huawei-sun2000-5-6-8-10-12k-map0/",
+          "especificaciones": {
+            "Serie": "SUN2000-5/6/8/10/12K-MAP0",
+            "Función descrita": "Admite sistema de almacenamiento de energía"
+          }
         }
       ]
     },
@@ -114,7 +154,9 @@
           "descripcion": "Sistemas de montaje construidos para durar: tejado inclinado, tejado plano, fachada y estructuras de suelo, adaptados a cada tipo de instalación.",
           "spec": "Estructuras · Construidas para durar",
           "img": "/assets/img/Schletter/Tejado-inclinado.webp",
-          "alt": "Estructura Schletter para tejado inclinado"
+          "alt": "Estructura Schletter para tejado inclinado",
+          "slug": "estructuras-de-montaje-schletter-tejado-inclinado",
+          "detalle": "/sistemas/estructuras-de-montaje-schletter-tejado-inclinado/"
         },
         {
           "tag": "Schletter",
@@ -122,7 +164,9 @@
           "descripcion": "Sistemas de montaje construidos para durar: tejado inclinado, tejado plano, fachada y estructuras de suelo, adaptados a cada tipo de instalación.",
           "spec": "Estructuras · Construidas para durar",
           "img": "/assets/img/Schletter/Tejado-plano.webp",
-          "alt": "Estructura Schletter para tejado plano"
+          "alt": "Estructura Schletter para tejado plano",
+          "slug": "tejado-plano-schletter",
+          "detalle": "/sistemas/tejado-plano-schletter/"
         },
         {
           "tag": "Schletter",
@@ -130,7 +174,9 @@
           "descripcion": "Sistemas de montaje construidos para durar: tejado inclinado, tejado plano, fachada y estructuras de suelo, adaptados a cada tipo de instalación.",
           "spec": "Estructuras · Construidas para durar",
           "img": "/assets/img/Schletter/Inclinacion-fija.webp",
-          "alt": "Estructura Schletter de inclinación fija"
+          "alt": "Estructura Schletter de inclinación fija",
+          "slug": "inclinacion-fija-schletter",
+          "detalle": "/sistemas/inclinacion-fija-schletter/"
         },
         {
           "tag": "Schletter",
@@ -138,7 +184,9 @@
           "descripcion": "Sistemas de montaje construidos para durar: tejado inclinado, tejado plano, fachada y estructuras de suelo, adaptados a cada tipo de instalación.",
           "spec": "Estructuras · Construidas para durar",
           "img": "/assets/img/Schletter/Seguimiento-solar.webp",
-          "alt": "Estructura Schletter con seguimiento solar"
+          "alt": "Estructura Schletter con seguimiento solar",
+          "slug": "seguimiento-solar-schletter",
+          "detalle": "/sistemas/seguimiento-solar-schletter/"
         },
         {
           "tag": "Schletter",
@@ -146,9 +194,10 @@
           "descripcion": "Sistemas de montaje construidos para durar: tejado inclinado, tejado plano, fachada y estructuras de suelo, adaptados a cada tipo de instalación.",
           "spec": "Estructuras · Construidas para durar",
           "img": "/assets/img/Schletter/Agrovoltaico.webp",
-          "alt": "Estructura Schletter agrovoltaica"
+          "alt": "Estructura Schletter agrovoltaica",
+          "slug": "agrovoltaico-schletter",
+          "detalle": "/sistemas/agrovoltaico-schletter/"
         }
-        
       ]
     }
   ]

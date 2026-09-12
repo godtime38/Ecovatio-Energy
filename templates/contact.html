@@ -1,0 +1,31 @@
+    <section id="contacto" class="section ec-contact" aria-labelledby="contact-heading">
+        <div class="wrap ec-contact-layout">
+            <div class="ec-contact-aside">
+                <p class="ec-contact-eyebrow">Hablemos de su proyecto</p>
+                <h2 id="contact-heading">Su próximo paso<br>hacia el <span>ahorro.</span></h2>
+                <p class="ec-contact-description">Cuéntenos qué necesita. Le ayudamos a encontrar una solución solar para su hogar o negocio.</p>
+                <ul class="ec-contact-benefits"><li>Cotización sin compromiso</li><li>Evaluación de su consumo</li><li>Asesoría para elegir sus equipos</li></ul>
+                <a class="ec-contact-wa" href="https://wa.me/message/S7ORWACDSX3UG1" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp"></use></svg>Prefiero hablar por WhatsApp <span aria-hidden="true">↗</span></a>
+                <div class="ec-contact-direct"><p>También puede contactarnos</p><a class="ec-contact-phone" href="tel:+18095697499">(809) 569-7499</a><a href="mailto:servicios@ecovatioenergy.com">servicios@ecovatioenergy.com</a><p>Santo Domingo, República Dominicana<br>Lun–Vie · 8:00 a. m. – 6:00 p. m.<br>Sábado · 8:00 a. m. – 1:00 p. m.</p></div>
+            </div>
+            <form id="contact-form" class="ec-contact-form" action="https://formspree.io/f/mykdnndz" method="POST">
+                <h3>¿Cómo podemos ayudarle?</h3><p class="ec-contact-subtitle">Déjenos sus datos para conversar sobre su proyecto.</p>
+                <div id="contact-context"></div>
+                <div class="ec-contact-fields">
+                    <label>Nombre <span aria-hidden="true">*</span><input name="nombre" autocomplete="name" placeholder="Su nombre" required maxlength="120"></label>
+                    <label>Teléfono <span aria-hidden="true">*</span><input type="tel" name="telefono" autocomplete="tel" placeholder="(809) 000-0000" required maxlength="40"></label>
+                    <label class="ec-contact-full">¿Qué necesita? <span aria-hidden="true">*</span><select name="interes" required><option value="">Seleccione una opción</option><option value="producto">Información sobre un producto</option><option value="residencial">Instalación para mi hogar</option><option value="comercial">Instalación para mi negocio</option><option value="mantenimiento">Mantenimiento o revisión</option><option value="asesoria">Asesoría para elegir un sistema</option></select></label>
+                    <label class="ec-contact-full">Provincia <span aria-hidden="true">*</span><select name="provincia" required><option value="">Seleccione su provincia</option><option>Santo Domingo</option><option>Distrito Nacional</option><option>Santiago</option><option>La Altagracia</option><option>San Cristóbal</option><option>Puerto Plata</option><option>La Vega</option><option>Otra provincia</option></select></label>
+                    <label class="ec-contact-full">Cuéntenos un poco más <span class="ec-contact-optional">(opcional)</span><textarea name="mensaje" rows="3" maxlength="3000" placeholder="Por ejemplo: quiero respaldo para mi casa durante los apagones."></textarea></label>
+                </div>
+                <details class="ec-contact-extras"><summary>Agregar correo, empresa o consumo <span>(opcional)</span></summary><div class="ec-contact-fields">
+                    <label>Correo<input type="email" name="correo" autocomplete="email" placeholder="nombre@correo.com" maxlength="254"></label>
+                    <label>Empresa<input name="empresa" autocomplete="organization" placeholder="Nombre de su empresa" maxlength="160"></label>
+                    <label class="ec-contact-full">Factura mensual aproximada<select name="consumo"><option value="">Seleccione un rango</option><option>Menos de RD$5,000</option><option>RD$5,000 – 15,000</option><option>RD$15,000 – 40,000</option><option>Más de RD$40,000</option></select></label>
+                </div></details>
+                <button type="submit" class="ec-contact-submit">Solicitar asesoría →</button>
+                <p class="ec-contact-privacy">Los campos con * son obligatorios. Usamos sus datos para atender esta consulta. <a href="/pages/privacidad.html">Cómo tratamos sus datos</a>.</p>
+                <div id="form-status" class="form-status" role="status" aria-live="polite" aria-atomic="true"></div>
+            </form>
+        </div>
+    </section>
