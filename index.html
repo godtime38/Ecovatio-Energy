@@ -8,7 +8,7 @@
     <title>Paneles Solares en República Dominicana | Ecovatio Energy</title>
     <meta name="description"
         content="Instalación de paneles solares para hogares, empresas e industrias en RD. Ahorre hasta 90% en su factura eléctrica. Cotización y estudio de consumo gratis.">
-    <link rel="canonical" href="https://ecovatioenergy.com/">
+    <link rel="canonical" href="https://www.ecovatioenergy.com/">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="theme-color" content="#01393A">
     <meta name="geo.region" content="DO">
@@ -21,27 +21,20 @@
     <meta property="og:title" content="Paneles Solares en República Dominicana | Ecovatio Energy">
     <meta property="og:description"
         content="Instalación de sistemas solares para hogares, empresas e industrias en RD. Ahorre hasta 90% en su factura eléctrica.">
-    <meta property="og:url" content="https://ecovatioenergy.com/">
-    <meta property="og:image" content="https://ecovatioenergy.com/assets/img/og-cover.jpg">
+    <meta property="og:url" content="https://www.ecovatioenergy.com/">
+    <meta property="og:image" content="https://www.ecovatioenergy.com/assets/img/og-cover.jpg">
     <meta name="twitter:card" content="summary_large_image">
 
     <link rel="icon" type="image/png" href="/assets/img/favicon.png">
     <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="preload" href="/assets/fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="/css/style.css">
-    <script>document.documentElement.classList.add('preloading');</script>
+    <link rel="preload" as="image" href="/assets/img/hero-mobile.webp" media="(max-width: 900px)" fetchpriority="high">
+    <link rel="preload" as="image" href="/assets/img/hero-green.webp" media="(min-width: 901px)" fetchpriority="high">
 </head>
 
 <body>
-    <!-- ================= PRELOADER ================= -->
-    <div class="preloader" id="preloader">
-        <div class="preloader__glow"></div>
-        <img class="preloader__logo" src="/assets/img/logo.png" alt="Ecovatio Energy">
-        <div class="preloader__ring"></div>
-        <div class="preloader__text">Cargando energía…</div>
-    </div>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
     <!-- ================= ICON SPRITE ================= -->
 
     <svg class="icon-sprite" aria-hidden="true">
@@ -162,15 +155,15 @@
     <!-- ================= HERO ================= -->
     <header id="inicio" class="hero">
         
-        <video class="hero__video" autoplay muted loop playsinline preload="auto"
-            poster="/assets/img/hero-green.webp">
-            <source src="/assets/img/banner.MP4" type="video/mp4">
+        <picture class="hero__poster"><source media="(max-width: 900px)" srcset="/assets/img/hero-mobile.webp"><img src="/assets/img/hero-green.webp" alt="" width="1440" height="960" fetchpriority="high"></picture>
+        <video class="hero__video" muted loop playsinline preload="none" aria-hidden="true">
+            <source data-src="/assets/img/banner.MP4" type="video/mp4">
         </video>
         <div class="hero__overlay"></div>
 
         <nav class="nav nav--overlay">
-            <a href="index.html" class="nav__logo">
-                <img src="/assets/img/logo.png" alt="Ecovatio Energy">
+            <a href="/" class="nav__logo">
+                <img src="/assets/img/logo-small.webp" width="160" height="160" alt="Ecovatio Energy">
             </a>
             <button class="nav__burger" id="nav-burger" aria-label="Abrir menú" aria-expanded="false">☰</button>
             <div class="nav__links" id="nav-links">
@@ -198,20 +191,50 @@
 
         <div class="hero__stats">
             <div>
-                <div class="stat__value">+20</div>
-                <div class="stat__label">proyectos realizados</div>
+                <div class="stat__value">9</div>
+                <div class="stat__label">proyectos en nuestra galería</div>
             </div>
             <div>
-                <div class="stat__value">98%</div>
-                <div class="stat__label">clientes satisfechos</div>
+                <div class="stat__value">A medida</div>
+                <div class="stat__label">diseño según su consumo</div>
             </div>
         
             <div>
-                <div class="stat__value stat__value--accent">95%</div>
-                <div class="stat__label">de ahorro en energía</div>
+                <div class="stat__value stat__value--accent">Sin costo</div>
+                <div class="stat__label">estudio inicial de consumo</div>
             </div>
         </div>
     </header>
+    <main id="contenido">
+    <section id="proyectos" class="section">
+        <div class="wrap">
+            <div class="eyebrow">Ecovatio Energy · Cartera de proyectos</div>
+            <h2 class="section-title">Energía puesta en obra.</h2>
+
+            <div class="projects-feature" id="projects-feature">
+                <!-- El proyecto destacado se carga dinámicamente desde /assets/data/proyectos.json -->
+            </div>
+
+            <div class="projects-rail-head">
+                <span class="projects-rail-label">Cartera completa · desliza el riel</span>
+                <div class="projects-rail-arrows">
+                    <button class="product-pager__arrow" id="projects-rail-prev" aria-label="Ver proyectos anteriores">←</button>
+                    <button class="product-pager__arrow" id="projects-rail-next" aria-label="Ver más proyectos">→</button>
+                </div>
+            </div>
+            <div class="projects-rail" id="projects-rail">
+                <a class="projects-rail__item" href="#contacto"><span class="projects-rail__thumb"><img src="/assets/img/proyectos/punta-cana/1-thumb.webp" alt="Proyecto residencial en Punta Cana" width="160" height="100" loading="lazy"></span><span class="projects-rail__city">Punta Cana</span><span class="projects-rail__meta">Residencial · 5.6 kWp</span></a>
+<a class="projects-rail__item" href="#contacto"><span class="projects-rail__thumb"><img src="/assets/img/proyectos/santo-domingo-oeste/1-thumb.webp" alt="Proyecto residencial en Santo Domingo Oeste" width="160" height="100" loading="lazy"></span><span class="projects-rail__city">Santo Domingo Oeste</span><span class="projects-rail__meta">Residencial · 40 kWp</span></a>
+<a class="projects-rail__item" href="#contacto"><span class="projects-rail__thumb"><img src="/assets/img/proyectos/bani/1-thumb.webp" alt="Villa con paneles en Bani" width="160" height="100" loading="lazy"></span><span class="projects-rail__city">Bani</span><span class="projects-rail__meta">Residencial · 13.2 kWp</span></a>
+<a class="projects-rail__item" href="#contacto"><span class="projects-rail__thumb"><img src="/assets/img/proyectos/san-juan/1-thumb.webp" alt="Proyecto agrícola en San Juan" width="160" height="100" loading="lazy"></span><span class="projects-rail__city">San Juan</span><span class="projects-rail__meta">Agrícola · 26.8 kWp</span></a>
+<a class="projects-rail__item" href="#contacto"><span class="projects-rail__thumb"><img src="/assets/img/proyectos/ocoa/1-thumb.webp" alt="Instalación comercial en Ocoa" width="160" height="100" loading="lazy"></span><span class="projects-rail__city">San José de Ocoa</span><span class="projects-rail__meta">Comercial · 31.9 kWp</span></a>
+<a class="projects-rail__item" href="#contacto"><span class="projects-rail__thumb"><img src="/assets/img/proyectos/santo-domingo-este/1-thumb.webp" alt="Residencia en Santo Domingo este" width="160" height="100" loading="lazy"></span><span class="projects-rail__city">Santo Domingo este</span><span class="projects-rail__meta">Residencial · 5.6 kWp</span></a>
+<a class="projects-rail__item" href="#contacto"><span class="projects-rail__thumb"><img src="/assets/img/proyectos/sdo-hato-nuevo/1-thumb.webp" alt="Residencia en Santo Domingo oeste Hato Nuevo" width="160" height="100" loading="lazy"></span><span class="projects-rail__city">Santo Domingo Oeste Hato Nuevo</span><span class="projects-rail__meta">Residencial · 6.1 kWp</span></a>
+<a class="projects-rail__item" href="#contacto"><span class="projects-rail__thumb"><img src="/assets/img/proyectos/san-juan-los-freezers/1-thumb.webp" alt="Residencia en San juan" width="160" height="100" loading="lazy"></span><span class="projects-rail__city">San Juan Los freezers Premuim</span><span class="projects-rail__meta">Residencial · 20.1 kWp</span></a>
+<a class="projects-rail__item" href="#contacto"><span class="projects-rail__thumb"><img src="/assets/img/proyectos/Monte-plata/1-thumb.webp" alt="Residencia en monte plata" width="160" height="100" loading="lazy"></span><span class="projects-rail__city">Monte Plata Pueblo Nuevo</span><span class="projects-rail__meta">Comercial · 16.80 kWp</span></a>
+            </div>
+        </div>
+    </section>
 
     <!-- ================= PROCESO ================= -->
      <!-- coorecion -->
@@ -503,8 +526,7 @@
         <div class="wrap">
             <div class="eyebrow eyebrow--light">Beneficios</div>
             <h2 class="section-title">Energía limpia que se paga sola.</h2>
-            <p class="section-lead section-lead--light">Más de 500 sistemas conectados a lo largo de todo el territorio
-                nacional.</p>
+            <p class="section-lead section-lead--light">Soluciones para hogares, comercios e industrias en República Dominicana.</p>
             <div class="grid-4" style="margin-top:54px">
                 <div class="benefit-card reveal">
                     <div class="benefit-card__dot"></div>
@@ -560,7 +582,21 @@
             </div>
 
             <div class="product-grid" id="sistemas-grid">
-                <!-- Los productos se cargan dinámicamente desde /assets/data/sistemas.json -->
+                <article class="product-card" data-category="paneles"><div class="product-card__img"><img src="/assets/img/paneles/jinko-panel-sin-fondo.webp" alt="Panel solar Jinko" loading="lazy" width="800" height="800"></div><div class="product-card__body"><div class="product-card__tag">Panel solar monofacial Jinko</div><h3 class="product-card__title">Panel Solar Jinko TOPCON</h3><p class="product-card__desc">Tecnología TOPCON de alta eficiencia: células N-Type con un 23,2% de eficiencia para una potencia superior.</p><a class="product-card__link" href="#contacto">Solicitar cotización →</a></div></article>
+<article class="product-card" data-category="paneles"><div class="product-card__img"><img src="/assets/img/paneles/login-paneles.webp" alt="Panel solar Longi Solar" loading="lazy" width="800" height="800"></div><div class="product-card__body"><div class="product-card__tag">Longi Solar</div><h3 class="product-card__title">Paneles Solares Longi Solar</h3><p class="product-card__desc">Paneles monocristalinos de alta eficiencia respaldados por la garantía de fábrica de Longi Solar, uno de los fabricantes líderes a nivel mundial en tecnología fotovoltaica.</p><a class="product-card__link" href="#contacto">Solicitar cotización →</a></div></article>
+<article class="product-card" data-category="paneles"><div class="product-card__img"><img src="/assets/img/paneles/Ja-Solar-Jamt.avif" alt="Panel solar JA Solar" loading="lazy" width="800" height="800"></div><div class="product-card__body"><div class="product-card__tag">JA Solar</div><h3 class="product-card__title">Paneles Solares JA Solar</h3><p class="product-card__desc">Paneles solares de alto rendimiento y durabilidad, fabricados por JA Solar, con presencia y certificaciones internacionales.</p><a class="product-card__link" href="#contacto">Solicitar cotización →</a></div></article>
+<article class="product-card" data-category="baterias"><div class="product-card__img"><img src="/assets/img/baterias/Weco_Residenziali_16K0-LV-1.webp" alt="Batería WeCo 16K0 LV" loading="lazy" width="800" height="800"></div><div class="product-card__body"><div class="product-card__tag">16K0 LV · 16 kWh</div><h3 class="product-card__title">Batería WeCo de bajo voltaje</h3><p class="product-card__desc">Sistema de almacenamiento LiFePO₄ de alta capacidad para energía de respaldo confiable e integración perfecta en instalaciones híbridas.</p><a class="product-card__link" href="#contacto">Solicitar cotización →</a></div></article>
+<article class="product-card" data-category="baterias"><div class="product-card__img"><img src="/assets/img/baterias/pytesBateria.webp" alt="Batería Pytes ESS" loading="lazy" width="800" height="800"></div><div class="product-card__body"><div class="product-card__tag">HV48100</div><h3 class="product-card__title">Batería Pytes ESS</h3><p class="product-card__desc">Sistema de almacenamiento de energía distribuida en gabinete con grado de protección IP20, que integra el paquete de baterías, la caja de control de alto voltaje y el sistema de administración de baterías.</p><a class="product-card__link" href="#contacto">Solicitar cotización →</a></div></article>
+<article class="product-card" data-category="inversores"><div class="product-card__img"><img src="/assets/img/baterias/Weco_Residenziali_XTS.webp" alt="Batería WeCo Serie XTS" loading="lazy" width="800" height="800"></div><div class="product-card__body"><div class="product-card__tag">Ajustar</div><h3 class="product-card__title">Ajustar</h3><p class="product-card__desc">Rendimiento de fase dividida para aplicaciones de 120/240V con mayor potencia, flexibilidad y gestión energética avanzada.</p><a class="product-card__link" href="#contacto">Solicitar cotización →</a></div></article>
+<article class="product-card" data-category="inversores"><div class="product-card__img"><img src="/assets/img/brands/victron-energy.svg" alt="Logo Victron Energy" loading="lazy" width="800" height="800"></div><div class="product-card__body"><div class="product-card__tag">Victron Energy</div><h3 class="product-card__title">Inversores Victron Energy</h3><p class="product-card__desc">Inversores y cargadores de referencia mundial en calidad y confiabilidad, con onda senoidal pura y monitoreo avanzado del sistema.</p><a class="product-card__link" href="#contacto">Solicitar cotización →</a></div></article>
+<article class="product-card" data-category="inversores"><div class="product-card__img"><img src="/assets/img/inversores/deye.webp" alt="Logo Deye" loading="lazy" width="800" height="800"></div><div class="product-card__body"><div class="product-card__tag">Deye</div><h3 class="product-card__title">Inversores Deye</h3><p class="product-card__desc">Inversores híbridos de alto rendimiento con soporte para baterías de litio y gestión inteligente de la energía solar.</p><a class="product-card__link" href="#contacto">Solicitar cotización →</a></div></article>
+<article class="product-card" data-category="inversores"><div class="product-card__img"><img src="/assets/img/inversores/inversorsoli.webp" alt="Logo Solis" loading="lazy" width="800" height="800"></div><div class="product-card__body"><div class="product-card__tag">S5-GC(50-60)K-LV</div><h3 class="product-card__title">Inversores Solis</h3><p class="product-card__desc">El S5-GC(50-60)K-LV es una nueva generación de productos trifásicos de 220v. Es uno de los inversores trifásicos en cadena de baja tensión más potentes del mundo. </p><a class="product-card__link" href="#contacto">Solicitar cotización →</a></div></article>
+<article class="product-card" data-category="inversores"><div class="product-card__img"><img src="/assets/img/inversores/invHuawaei.webp" alt="Logo Huawei" loading="lazy" width="800" height="800"></div><div class="product-card__body"><div class="product-card__tag">SUN2000-5/6/8/10/12K-MAP0</div><h3 class="product-card__title">Inversores Huawei</h3><p class="product-card__desc">El potente inversor mantiene activos más electrodomésticos con mayor autosuficiencia con energía verde y facturas de electricidad más bajas. El nuevo inversor MAP0 admite sistema de almacenamiento de energía. Pásate a la energía verde con menos inversores.</p><a class="product-card__link" href="#contacto">Solicitar cotización →</a></div></article>
+<article class="product-card" data-category="estructuras"><div class="product-card__img"><img src="/assets/img/Schletter/Tejado-inclinado.webp" alt="Estructura Schletter para tejado inclinado" loading="lazy" width="800" height="800"></div><div class="product-card__body"><div class="product-card__tag">Tejado Inclinado</div><h3 class="product-card__title">Estructuras de Montaje Schletter</h3><p class="product-card__desc">Sistemas de montaje construidos para durar: tejado inclinado, tejado plano, fachada y estructuras de suelo, adaptados a cada tipo de instalación.</p><a class="product-card__link" href="#contacto">Solicitar cotización →</a></div></article>
+<article class="product-card" data-category="estructuras"><div class="product-card__img"><img src="/assets/img/Schletter/Tejado-plano.webp" alt="Estructura Schletter para tejado plano" loading="lazy" width="800" height="800"></div><div class="product-card__body"><div class="product-card__tag">Schletter</div><h3 class="product-card__title">Tejado Plano.</h3><p class="product-card__desc">Sistemas de montaje construidos para durar: tejado inclinado, tejado plano, fachada y estructuras de suelo, adaptados a cada tipo de instalación.</p><a class="product-card__link" href="#contacto">Solicitar cotización →</a></div></article>
+<article class="product-card" data-category="estructuras"><div class="product-card__img"><img src="/assets/img/Schletter/Inclinacion-fija.webp" alt="Estructura Schletter de inclinación fija" loading="lazy" width="800" height="800"></div><div class="product-card__body"><div class="product-card__tag">Schletter</div><h3 class="product-card__title">Inclinacion Fija.</h3><p class="product-card__desc">Sistemas de montaje construidos para durar: tejado inclinado, tejado plano, fachada y estructuras de suelo, adaptados a cada tipo de instalación.</p><a class="product-card__link" href="#contacto">Solicitar cotización →</a></div></article>
+<article class="product-card" data-category="estructuras"><div class="product-card__img"><img src="/assets/img/Schletter/Seguimiento-solar.webp" alt="Estructura Schletter con seguimiento solar" loading="lazy" width="800" height="800"></div><div class="product-card__body"><div class="product-card__tag">Schletter</div><h3 class="product-card__title">Seguimiento Solar.</h3><p class="product-card__desc">Sistemas de montaje construidos para durar: tejado inclinado, tejado plano, fachada y estructuras de suelo, adaptados a cada tipo de instalación.</p><a class="product-card__link" href="#contacto">Solicitar cotización →</a></div></article>
+<article class="product-card" data-category="estructuras"><div class="product-card__img"><img src="/assets/img/Schletter/Agrovoltaico.webp" alt="Estructura Schletter agrovoltaica" loading="lazy" width="800" height="800"></div><div class="product-card__body"><div class="product-card__tag">Schletter</div><h3 class="product-card__title">Agrovoltaico.</h3><p class="product-card__desc">Sistemas de montaje construidos para durar: tejado inclinado, tejado plano, fachada y estructuras de suelo, adaptados a cada tipo de instalación.</p><a class="product-card__link" href="#contacto">Solicitar cotización →</a></div></article>
             </div>
 
             <div class="product-pager" id="sistemas-pager" hidden>
@@ -581,27 +617,7 @@
     </section>
 
     <!-- ================= PROYECTOS ================= -->
-    <section id="proyectos" class="section">
-        <div class="wrap">
-            <div class="eyebrow">Ecovatio Energy · Cartera de proyectos</div>
-            <h2 class="section-title">Energía puesta en obra.</h2>
 
-            <div class="projects-feature" id="projects-feature">
-                <!-- El proyecto destacado se carga dinámicamente desde /assets/data/proyectos.json -->
-            </div>
-
-            <div class="projects-rail-head">
-                <span class="projects-rail-label">Cartera completa · desliza el riel</span>
-                <div class="projects-rail-arrows">
-                    <button class="product-pager__arrow" id="projects-rail-prev" aria-label="Ver proyectos anteriores">←</button>
-                    <button class="product-pager__arrow" id="projects-rail-next" aria-label="Ver más proyectos">→</button>
-                </div>
-            </div>
-            <div class="projects-rail" id="projects-rail">
-                <!-- Las miniaturas se cargan dinámicamente desde /assets/data/proyectos.json -->
-            </div>
-        </div>
-    </section>
 
     <!-- ================= CALCULADORA ================= -->
     <section id="calculadora" class="section section--alt">
@@ -626,14 +642,18 @@
                             <button class="seg__btn" data-prop="industrial">Industrial</button>
                         </div>
                     </div>
-                    <div class="calc-note">* Estimación referencial. La cifra final depende del estudio de consumo y la
-                        inspección técnica.</div>
+                    <div class="calc-note">* Estimación referencial sujeta al estudio de consumo y la inspección técnica.
+                        <details><summary>Ver supuestos de la estimación</summary>
+                        Ahorro estimado del 85% residencial, 75% comercial o 65% industrial.
+                        Producción de 130 kWh mensuales por kWp y costo referencial de RD$68,000 por kWp.
+                        El retorno simple no incluye financiación, mantenimiento ni variaciones de tarifa.
+                        </details></div>
                 </div>
                 <div class="calc-results">
                     <div class="bill">
                         <div class="bill__head">
-                            <div class="bill__head-title">Estimado de tu factura solar</div>
-                            <div class="bill__head-sub">Basado en tu consumo actual</div>
+                            <div class="bill__head-title">Estimado de su factura solar</div>
+                            <div class="bill__head-sub">Basado en su consumo actual</div>
                         </div>
                         <div class="bill__rows">
                             <div class="bill__row">
@@ -667,7 +687,7 @@
                             <div class="roi-bar">
                                 <div class="roi-bar__fill" id="calc-roi-bar"></div>
                             </div>
-                            <div class="roi-scale"><span>0 años</span><span>10 años</span></div>
+                            <div class="roi-scale"><span>0 años</span><span>10+ años</span></div>
                         </div>
                     </div>
                     <a href="#contacto" class="btn btn--primary btn--block">Solicitar estudio gratuito</a>
@@ -812,13 +832,13 @@
                         <span class="badge">Gratis</span>
                     </div>
                     <div class="contact-form__grid">
-                        <label class="field"><span>Nombre</span><input type="text" name="nombre" placeholder="Su nombre"
+                        <label class="field"><span>Nombre</span><input type="text" name="nombre" autocomplete="name" placeholder="Su nombre"
                                 required></label>
-                        <label class="field"><span>Empresa (opcional)</span><input type="text" name="empresa"
+                        <label class="field"><span>Empresa (opcional)</span><input type="text" name="empresa" autocomplete="organization"
                                 placeholder="Nombre de la empresa"></label>
-                        <label class="field"><span>Teléfono</span><input type="tel" name="telefono"
+                        <label class="field"><span>Teléfono</span><input type="tel" name="telefono" autocomplete="tel"
                                 placeholder="(809) 000-0000" required></label>
-                        <label class="field"><span>Correo</span><input type="email" name="correo"
+                        <label class="field"><span>Correo</span><input type="email" name="correo" autocomplete="email"
                                 placeholder="nombre@correo.com"></label>
                         <div class="field field--full">
                             <span>Provincia</span>
@@ -858,21 +878,22 @@
                                 placeholder="Cuéntenos sobre su proyecto"></textarea></label>
                     </div>
                     <div class="contact-form__footer">
-                        <p class="contact-form__privacy">Sus datos solo se usan para preparar la cotización.</p>
+                        <p class="contact-form__privacy">Usamos sus datos para atender su solicitud. <a href="/pages/privacidad.html">Cómo tratamos sus datos</a>.</p>
                         <button type="submit" class="btn btn--dark">Solicitar cotización →</button>
                     </div>
-                    <div id="form-status" class="form-status">✓ Datos recibidos exitosamente. Le contactaremos pronto.
+                    <div id="form-status" class="form-status" role="status" aria-live="polite" aria-atomic="true">✓ Datos recibidos exitosamente. Le contactaremos pronto.
                     </div>
                 </form>
             </div>
         </div>
     </section>
 
+    </main>
     <!-- ================= FOOTER ================= -->
     <footer class="footer">
         <div class="footer__grid">
             <div>
-                <img class="footer__logo" src="/assets/img/logo.png" alt="Ecovatio Energy">
+                <img class="footer__logo" src="/assets/img/logo-small.webp" width="160" height="160" alt="Ecovatio Energy">
                 <p class="footer__about">Instalación de sistemas de energía solar para hogares, empresas e industrias en
                     República Dominicana.</p>
             </div>
@@ -916,8 +937,8 @@
         <div class="footer__bottom">
             <span>© 2026 Ecovatio Energy. Todos los derechos reservados.</span>
             <div class="footer__bottom-links">
-                <a href="#">Términos y condiciones</a>
-                <a href="#">Política de privacidad</a>
+                <a href="/pages/condiciones.html">Condiciones del servicio</a>
+                <a href="/pages/privacidad.html">Privacidad</a>
             </div>
         </div>
     </footer>
@@ -938,25 +959,22 @@
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "SolarEnergyContractor",
-  "@id": "https://ecovatioenergy.com/#negocio",
+  "@type": "HomeAndConstructionBusiness",
+  "@id": "https://www.ecovatioenergy.com/#negocio",
   "name": "Ecovatio Energy",
-  "url": "https://ecovatioenergy.com/",
-  "logo": "https://ecovatioenergy.com/assets/img/logo.png",
-  "image": "https://ecovatioenergy.com/assets/img/og-cover.jpg",
+  "url": "https://www.ecovatioenergy.com/",
+  "logo": "https://www.ecovatioenergy.com/assets/img/logo.png",
+  "image": "https://www.ecovatioenergy.com/assets/img/og-cover.jpg",
   "description": "Diseño e instalación de sistemas de energía solar para hogares, empresas e industrias en República Dominicana.",
   "telephone": "+1-809-569-7499",
   "email": "Servicios@ecovatioenergy.com",
   "priceRange": "$$",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "CALLE Y NÚMERO REALES AQUÍ",
     "addressLocality": "Santo Domingo",
     "addressRegion": "Distrito Nacional",
-    "postalCode": "10000",
     "addressCountry": "DO"
   },
-  "geo": { "@type": "GeoCoordinates", "latitude": 18.4861, "longitude": -69.9312 },
   "areaServed": [
     { "@type": "State", "name": "Distrito Nacional" },
     { "@type": "State", "name": "Santo Domingo" },

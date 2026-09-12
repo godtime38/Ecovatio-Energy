@@ -2,10 +2,23 @@ RewriteEngine On
 
 # HTTPS y dominio único
 RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://ecovatioenergy.com/$1 [R=301,L]
-RewriteCond %{HTTP_HOST} ^www\. [NC]
-RewriteRule ^(.*)$ https://ecovatioenergy.com/$1 [R=301,L]
+RewriteRule ^(.*)$ https://www.ecovatioenergy.com/$1 [R=301,L]
+RewriteCond %{HTTP_HOST} !^www\.ecovatioenergy\.com$ [NC]
+RewriteRule ^(.*)$ https://www.ecovatioenergy.com/$1 [R=301,L]
 
 # Quitar index.html de las URLs
 RewriteCond %{THE_REQUEST} \s/+(.*/)?index\.html[\s?] [NC]
 RewriteRule ^(.*)index\.html$ /$1 [R=301,L]
+
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json image/svg+xml
+</IfModule>
+
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/webp "access plus 1 month"
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType text/css "access plus 1 week"
+    ExpiresByType application/javascript "access plus 1 week"
+</IfModule>

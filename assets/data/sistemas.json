@@ -10,7 +10,7 @@
           "titulo": "Panel Solar Jinko TOPCON",
           "descripcion": "Tecnología TOPCON de alta eficiencia: células N-Type con un 23,2% de eficiencia para una potencia superior.",
           "spec": "Paneles, Energía limpia",
-          "img": "/assets/img/paneles/jinko-panel-sin-fondo.png",
+          "img": "/assets/img/paneles/jinko-panel-sin-fondo.webp",
           "alt": "Panel solar Jinko"
         },
         {
@@ -18,7 +18,7 @@
           "titulo": "Paneles Solares Longi Solar",
           "descripcion": "Paneles monocristalinos de alta eficiencia respaldados por la garantía de fábrica de Longi Solar, uno de los fabricantes líderes a nivel mundial en tecnología fotovoltaica.",
           "spec": "Paneles · Alta eficiencia",
-          "img": "/assets/img/paneles/login-paneles.png",
+          "img": "/assets/img/paneles/login-paneles.webp",
           "alt": "Panel solar Longi Solar"
         },
         {
@@ -41,7 +41,7 @@
           "titulo": "Batería WeCo de bajo voltaje",
           "descripcion": "Sistema de almacenamiento LiFePO₄ de alta capacidad para energía de respaldo confiable e integración perfecta en instalaciones híbridas.",
           "spec": "Litio LiFePO4 de larga vida",
-          "img": "/assets/img/baterias/Weco_Residenziali_16K0-LV-1.png",
+          "img": "/assets/img/baterias/Weco_Residenziali_16K0-LV-1.webp",
           "alt": "Batería WeCo 16K0 LV"
         },
         {
@@ -65,7 +65,7 @@
           "titulo": "Ajustar",
           "descripcion": "Rendimiento de fase dividida para aplicaciones de 120/240V con mayor potencia, flexibilidad y gestión energética avanzada.",
           "spec": "Control y respaldo sin interrupciones",
-          "img": "/assets/img/baterias/Weco_Residenziali_XTS.png",
+          "img": "/assets/img/baterias/Weco_Residenziali_XTS.webp",
           "alt": "Batería WeCo Serie XTS"
         },
         
@@ -82,7 +82,7 @@
           "titulo": "Inversores Deye",
           "descripcion": "Inversores híbridos de alto rendimiento con soporte para baterías de litio y gestión inteligente de la energía solar.",
           "spec": "Inversores · Híbridos",
-          "img": "/assets/img/inversores/deye.jpg",
+          "img": "/assets/img/inversores/deye.webp",
           "alt": "Logo Deye"
         },
         {
@@ -98,7 +98,7 @@
           "titulo": "Inversores Huawei",
           "descripcion": "El potente inversor mantiene activos más electrodomésticos con mayor autosuficiencia con energía verde y facturas de electricidad más bajas. El nuevo inversor MAP0 admite sistema de almacenamiento de energía. Pásate a la energía verde con menos inversores.",
           "spec": "Inversores · Presencia global",
-          "img": "/assets/img/inversores/invHuawaei.png",
+          "img": "/assets/img/inversores/invHuawaei.webp",
           "alt": "Logo Huawei"
         }
       ]

@@ -8,7 +8,7 @@
     --card: #ffffff;
     --ink: #01393A;
     --sub: #4b5f5a;
-    --mut: #6b7f7a;
+    --mut: #566b65;
     --line: rgba(1, 57, 58, .1);
     --shadow: 0 10px 30px rgba(1, 57, 58, .08);
     --brand: #01393A;
@@ -248,7 +248,7 @@ html.js .reveal.in { animation: rise .7s ease both; opacity: 1; }
 .hero__overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, rgba(1, 57, 58, .55) 0%, rgba(1, 57, 58, .25) 40%, rgba(1, 30, 31, .88) 100%);
+    background: linear-gradient(90deg, rgba(1, 30, 31, .78), rgba(1, 30, 31, .35)), linear-gradient(180deg, rgba(1, 57, 58, .25), rgba(1, 30, 31, .88));
 }
 
 .hero__content {
@@ -275,7 +275,7 @@ html.js .reveal.in { animation: rise .7s ease both; opacity: 1; }
     margin: 22px 0 30px;
     font-size: 18px;
     line-height: 1.6;
-    color: rgba(255, 255, 255, .82);
+    color: #fff;
     max-width: 560px;
 }
 
@@ -1773,3 +1773,38 @@ html.preloading, html.preloading body { overflow: hidden; }
 @media (max-width: 480px) {
     .brand-grid { grid-template-columns: 1fr; }
 }
+
+/* Audit improvements: keyboard access and resilient mobile layout. */
+.skip-link { position: fixed; top: -100px; left: 16px; z-index: 10000; padding: 12px 20px; background: #fff; color: #01393a; }
+.skip-link:focus { top: 12px; }
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible { outline: 3px solid #67b660; outline-offset: 4px; }
+button:disabled { cursor: wait; opacity: .65; }
+.hero .eyebrow--light { color: #b9f2ad; }
+.hero__stats { grid-template-columns: repeat(3, 1fr); }
+.form-status { color: var(--ink); }
+@media (max-width: 768px) {
+    .hero { height: auto; min-height: 100svh; padding-top: 135px; }
+    .hero__content { position: relative; left: auto; right: auto; bottom: auto; margin: 40px 20px; }
+    .hero__stats { position: relative; left: auto; right: auto; margin: 0 20px; grid-template-columns: repeat(2, 1fr); }
+    .hero__stats .stat__value { font-size: 26px; }
+}
+@media (prefers-reduced-motion: reduce) {
+    html.js .reveal, html.js .reveal.in { opacity: 1; transform: none; animation: none; }
+    .hero__content { animation: none; }
+}
+
+/* Lighthouse: local font, responsive hero, accessible text colors. */
+@font-face { font-family: 'Montserrat'; font-style: normal; font-weight: 100 900; font-display: swap; src: url('/assets/fonts/montserrat-latin.woff2') format('woff2'); }
+:root { --accent-text: #28712f; }
+body[data-theme="dark"] { --accent-text: #8fd189; }
+.hero__poster, .hero__poster img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.hero__video { opacity: 0; }
+.hero__video.is-playing { opacity: 1; }
+.hero__content { animation: none; }
+.eyebrow, .section-title__accent, .seg__btn.active, .badge,
+.pill input:checked + span, .contact-form__privacy a, .product-card__link { color: var(--accent-text); }
+.eyebrow--light, .section--dark .eyebrow { color: var(--accent-2); }
+.contact-form__privacy a { text-decoration: underline; text-underline-offset: 3px; }
+.projects-feature__stats span, .contact-info__label, .roi-scale,
+.footer__bottom span, .footer__bottom a { color: rgba(255,255,255,.72); }
+.brand-strip__item img { width: 130px; height: 40px; object-fit: contain; }

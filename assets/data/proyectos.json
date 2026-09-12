@@ -6,7 +6,7 @@
       "paneles": 9,
       "kwp": "5.6",
       "anio": "2026",
-      "images": ["/assets/img/proyectos/punta-cana/1.jpg"],
+      "images": ["/assets/img/proyectos/punta-cana/1.webp"],
       "alt": "Proyecto residencial en Punta Cana"
     },
     {
@@ -15,7 +15,7 @@
       "paneles": 50,
       "kwp": "40",
       "anio": "2026",
-      "images": ["/assets/img/proyectos/santo-domingo-oeste/1.jpg"],
+      "images": ["/assets/img/proyectos/santo-domingo-oeste/1.webp"],
       "alt": "Proyecto residencial en Santo Domingo Oeste"
     },
     {
@@ -24,7 +24,7 @@
       "paneles": 24,
       "kwp": "13.2",
       "anio": "2026",
-      "images": ["/assets/img/proyectos/bani/1.jpg", "/assets/img/proyectos/bani/2.jpeg", "/assets/img/proyectos/bani/3.jpeg", "/assets/img/proyectos/bani/4.jpg"],
+      "images": ["/assets/img/proyectos/bani/1.webp", "/assets/img/proyectos/bani/2.webp", "/assets/img/proyectos/bani/3.webp", "/assets/img/proyectos/bani/4.webp"],
       "alt": "Villa con paneles en Bani"
     },
     {
@@ -33,7 +33,7 @@
       "paneles": 48,
       "kwp": "26.8",
       "anio": "2026",
-      "images": ["/assets/img/proyectos/san-juan/1.jpg"],
+      "images": ["/assets/img/proyectos/san-juan/1.webp"],
       "alt": "Proyecto agrícola en San Juan"
     },
     {
@@ -42,7 +42,7 @@
       "paneles": 45,
       "kwp": "31.9",
       "anio": "2026",
-      "images": ["/assets/img/proyectos/ocoa/1.jpg"],
+      "images": ["/assets/img/proyectos/ocoa/1.webp"],
       "alt": "Instalación comercial en Ocoa"
     },
     {
@@ -51,7 +51,7 @@
       "paneles": 9,
       "kwp": "5.6",
       "anio": "2026",
-      "images": ["/assets/img/proyectos/santo-domingo-este/1.jpg"],
+      "images": ["/assets/img/proyectos/santo-domingo-este/1.webp"],
       "alt": "Residencia en Santo Domingo este"
     },
 
@@ -61,7 +61,7 @@
       "paneles": 10,
       "kwp": "6.1",
       "anio": "2026",
-      "images": ["/assets/img/proyectos/sdo-hato-nuevo/1.jpg"],
+      "images": ["/assets/img/proyectos/sdo-hato-nuevo/1.webp"],
       "alt": "Residencia en Santo Domingo oeste Hato Nuevo"
     },
 
@@ -71,7 +71,7 @@
       "paneles": 22,
       "kwp": "20.1",
       "anio": "2026",
-      "images": ["/assets/img/proyectos/san-juan-los-freezers/1.jpg"],
+      "images": ["/assets/img/proyectos/san-juan-los-freezers/1.webp"],
       "alt": "Residencia en San juan"
     },
     {
@@ -80,7 +80,7 @@
       "paneles": 28,
       "kwp": "16.80",
       "anio": "2026",
-      "images": ["/assets/img/proyectos/Monte-plata/1.png", "/assets/img/proyectos/Monte-plata/2.png", "/assets/img/proyectos/Monte-plata/3.png", "/assets/img/proyectos/Monte-plata/4.png"],
+      "images": ["/assets/img/proyectos/Monte-plata/1.webp", "/assets/img/proyectos/Monte-plata/2.webp", "/assets/img/proyectos/Monte-plata/3.webp", "/assets/img/proyectos/Monte-plata/4.png"],
       "alt": "Residencia en monte plata"
     }
   ]

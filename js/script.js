@@ -1,35 +1,17 @@
-/* ---------- Preloader ---------- */
+/* ---------- Deferred desktop video; the poster is always available ---------- */
 (function () {
-    var seen = false;
-    try {
-        seen = !!sessionStorage.getItem('ecovatio-loaded');
-        sessionStorage.setItem('ecovatio-loaded', '1');
-    } catch (e) { /* modo privado en Safari viejo */ }
-
-    var MIN_TIME = seen ? 0 : 300;   // primera visita 300ms, luego sin espera
-    var MAX_TIME = 6000;             // tope de seguridad: nunca se queda pegado
-    var start = Date.now();
-    var done = false;
-
-    function hide() {
-        if (done) return;
-        done = true;
-        document.documentElement.classList.remove('preloading');
-        var el = document.getElementById('preloader');
-        if (!el) return;
-        el.classList.add('hide');
-        setTimeout(function () { el.parentNode && el.parentNode.removeChild(el); }, 700);
-    }
-
-    function finish() {
-        setTimeout(hide, Math.max(0, MIN_TIME - (Date.now() - start)));
-    }
-
-    if (document.readyState === 'complete') { finish(); }
-    else { window.addEventListener('load', finish); }
-
-    setTimeout(hide, MAX_TIME);
-    window.addEventListener('pageshow', function (e) { if (e.persisted) hide(); });
+    window.addEventListener('load', function () {
+        var video = document.querySelector('.hero__video');
+        if (!video || !window.matchMedia('(min-width: 901px)').matches ||
+            window.matchMedia('(prefers-reduced-motion: reduce)').matches ||
+            (navigator.connection && navigator.connection.saveData)) return;
+        var source = video.querySelector('source[data-src]');
+        if (!source) return;
+        video.addEventListener('playing', function () { video.classList.add('is-playing'); }, { once: true });
+        source.src = source.dataset.src;
+        video.load();
+        video.play().catch(function () { /* Keep the poster if autoplay is blocked. */ });
+    });
 })();
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -61,12 +43,12 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    applyTheme(localStorage.getItem('ecovatio-theme'));
+    try { applyTheme(localStorage.getItem('ecovatio-theme')); } catch (e) { applyTheme('light'); }
 
     if (themeBtn) {
         themeBtn.addEventListener('click', function () {
             var next = document.body.dataset.theme === 'dark' ? 'light' : 'dark';
-            localStorage.setItem('ecovatio-theme', next);
+            try { localStorage.setItem('ecovatio-theme', next); } catch (e) { /* Storage may be unavailable. */ }
             applyTheme(next);
         });
     }
@@ -139,6 +121,7 @@ document.addEventListener('DOMContentLoaded', function () {
         fetch('/assets/data/sistemas.json')
             .then(function (res) { return res.json(); })
             .then(function (data) {
+                sistemasGrid.replaceChildren();
                 var allBtn = document.createElement('button');
                 allBtn.className = 'filter-btn active';
                 allBtn.dataset.filter = 'todos';
@@ -164,6 +147,8 @@ document.addEventListener('DOMContentLoaded', function () {
                         img.src = p.img;
                         img.alt = p.alt || p.titulo;
                         img.loading = 'lazy';
+                        img.width = 800;
+                        img.height = 800;
                         img.addEventListener('error', function () {
                             var badge = document.createElement('div');
                             badge.className = 'product-card__badge';
@@ -272,7 +257,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 renderPage();
             })
             .catch(function () {
-                sistemasGrid.innerHTML = '<p style="color:var(--mut)">No se pudieron cargar los sistemas en este momento.</p>';
+                // Keep the static catalog available when the network is unavailable.
             });
     }
 
@@ -311,7 +296,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
                     var img = document.createElement('img');
                     img.src = images[activeImageIndex];
+                    img.srcset = images[activeImageIndex].replace('.webp', '-medium.webp') + ' 800w, ' + images[activeImageIndex] + ' 1440w';
+                    img.sizes = '(max-width: 900px) calc(100vw - 40px), 60vw';
+                    img.width = 1440;
+                    img.height = 1080;
                     img.alt = p.alt || p.ciudad;
+                    img.loading = 'lazy';
                     media.appendChild(img);
 
                     if (images.length > 1) {
@@ -381,7 +371,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         item.type = 'button';
                         item.className = 'projects-rail__item' + (i === activeIndex ? ' is-active' : '');
                         item.innerHTML =
-                            '<span class="projects-rail__thumb"><img src="' + images[0] + '" alt="' + (p.alt || p.ciudad) + '" loading="lazy"></span>' +
+                            '<span class="projects-rail__thumb"><img src="' + images[0].replace('.webp', '-thumb.webp') + '" alt="' + (p.alt || p.ciudad) + '" loading="lazy" width="360" height="240"></span>' +
                             '<span class="projects-rail__num">' + pad(i + 1) + '</span>' +
                             '<span class="projects-rail__city">' + p.ciudad + '</span>' +
                             '<span class="projects-rail__meta">' + p.categoria + (p.anio ? ' · ' + p.anio : '') + '</span>';
@@ -432,8 +422,9 @@ document.addEventListener('DOMContentLoaded', function () {
                     var img = document.createElement('img');
                     img.src = marca.img;
                     img.alt = marca.nombre;
-                    // sin lazy: la cinta se mueve sola y el usuario puede no "acercarse" nunca
-                    // en scroll a un logo dado, dejándolo en ancho 0 (imagen rota sin cargar)
+                    img.loading = 'lazy';
+                    img.width = 130;
+                    img.height = 40;
                     img.addEventListener('error', function () {
                         var badge = document.createElement('div');
                         badge.className = 'brand-strip__badge';
@@ -545,12 +536,19 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     /* ---------- FAQ (acordeón) ---------- */
-    document.querySelectorAll('.faq-item__q').forEach(function (btn) {
+    document.querySelectorAll('.faq-item__q').forEach(function (btn, index) {
+        var answer = btn.closest('.faq-item').querySelector('.faq-item__a');
+        answer.id = 'faq-answer-' + index;
+        btn.setAttribute('aria-controls', answer.id);
+        btn.setAttribute('aria-expanded', btn.closest('.faq-item').classList.contains('open'));
         btn.addEventListener('click', function () {
             var item = btn.closest('.faq-item');
             var wasOpen = item.classList.contains('open');
             document.querySelectorAll('.faq-item.open').forEach(function (o) { o.classList.remove('open'); });
             if (!wasOpen) item.classList.add('open');
+            document.querySelectorAll('.faq-item__q').forEach(function (question) {
+                question.setAttribute('aria-expanded', question.closest('.faq-item').classList.contains('open'));
+            });
         });
     });
 
@@ -563,10 +561,11 @@ document.addEventListener('DOMContentLoaded', function () {
         var SAVING_PCT = { residencial: 0.85, comercial: 0.75, industrial: 0.65 };
         var COST_PER_KW = 68000;   // RD$ por kWp instalado (referencial)
         var KWH_PER_KW = 130;      // producción mensual aprox. por kWp en RD
-        var YIELD_YEAR = 1450;     // kWh/kWp/año aprox. en RD
+        var YIELD_YEAR = KWH_PER_KW * 12; // Keep sizing and investment assumptions consistent.
         var CO2_FACTOR = 0.5;      // kg CO2 por kWh
 
         var prop = 'residencial';
+        var calculatorUsed = false;
 
         var outMonthly = document.getElementById('calc-monthly');
         var outYearly = document.getElementById('calc-yearly');
@@ -598,7 +597,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (yearly > 0 && sysCost > 0) {
                 var roi = sysCost / yearly;
                 var clamped = Math.min(10, Math.max(0.5, roi));
-                outRoi.textContent = clamped.toFixed(1) + ' años';
+                outRoi.textContent = roi.toFixed(1) + ' años';
                 outRoiBar.style.width = (clamped / 10 * 100).toFixed(0) + '%';
             } else {
                 outRoi.textContent = '—';
@@ -609,12 +608,13 @@ document.addEventListener('DOMContentLoaded', function () {
             if (outCo2) outCo2.textContent = Math.round(kwh * 12 * CO2_FACTOR).toLocaleString('es-DO') + ' kg/año';
         }
 
-        kwhInput.addEventListener('input', calculate);
-        billInput.addEventListener('input', calculate);
+        kwhInput.addEventListener('input', function () { calculatorUsed = true; calculate(); });
+        billInput.addEventListener('input', function () { calculatorUsed = true; calculate(); });
 
         if (seg) {
             seg.querySelectorAll('.seg__btn').forEach(function (btn) {
                 btn.addEventListener('click', function () {
+                    calculatorUsed = true;
                     prop = btn.dataset.prop;
                     seg.querySelectorAll('.seg__btn').forEach(function (b) { b.classList.remove('active'); });
                     btn.classList.add('active');
@@ -631,29 +631,42 @@ document.addEventListener('DOMContentLoaded', function () {
     var formStatus = document.getElementById('form-status');
 
     if (contactForm && formStatus) {
+        var submitting = false;
         contactForm.addEventListener('submit', function (e) {
             e.preventDefault();
-
+            if (submitting) return;
+            submitting = true;
+            var submitButton = contactForm.querySelector('[type="submit"]');
+            submitButton.disabled = true;
+            submitButton.textContent = 'Enviando…';
+            contactForm.setAttribute('aria-busy', 'true');
+            formStatus.classList.remove('show');
+            var payload = new FormData(contactForm);
+            if (kwhInput && billInput && calculatorUsed) {
+                payload.set('consumo_kwh', kwhInput.value);
+                payload.set('factura_rd', billInput.value);
+                payload.set('tipo_propiedad', prop);
+            }
             fetch(contactForm.action, {
                 method: contactForm.method,
-                body: new FormData(contactForm),
+                body: payload,
                 headers: { 'Accept': 'application/json' }
             }).then(function (response) {
                 if (response.ok) {
+                    formStatus.textContent = '✓ Datos recibidos. Le contactaremos pronto.';
                     formStatus.classList.add('show');
                     contactForm.reset();
-                    setTimeout(function () { formStatus.classList.remove('show'); }, 6000);
                 } else {
-                    response.json().then(function (data) {
-                        if (Object.hasOwn(data, 'errors')) {
-                            alert(data.errors.map(function (err) { return err.message; }).join(', '));
-                        } else {
-                            alert('Oops! Hubo un problema al enviar el formulario.');
-                        }
-                    });
+                    throw new Error('Submission failed');
                 }
             }).catch(function () {
-                alert('Oops! Hubo un problema al enviar el formulario.');
+                formStatus.textContent = 'No se pudo enviar. Sus datos se conservan: inténtelo de nuevo o contáctenos por WhatsApp.';
+                formStatus.classList.add('show');
+            }).finally(function () {
+                submitting = false;
+                submitButton.disabled = false;
+                submitButton.textContent = 'Solicitar cotización →';
+                contactForm.removeAttribute('aria-busy');
             });
         });
     }
