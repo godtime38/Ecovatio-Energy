@@ -1,2 +1,7 @@
 .cache/
 .claude/
+
+public-dist/
+.env
+.env.local
+node_modules/

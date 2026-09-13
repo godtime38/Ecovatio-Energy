@@ -1,0 +1,37 @@
+{
+  "framework": null,
+  "buildCommand": "node scripts/build-vercel.cjs",
+  "outputDirectory": "public-dist",
+  "functions": {
+    "api/*.js": {
+      "includeFiles": "{server/**,assets/data/**,index.html,sitemap.xml,proyectos/**,sistemas/**}",
+      "maxDuration": 30
+    }
+  },
+  "routes": [
+    {
+      "src": "/admin(?:/.*)?",
+      "headers": {
+        "X-Robots-Tag": "noindex, nofollow",
+        "Cache-Control": "no-store",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Content-Security-Policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' https://*.supabase.co data: blob:; connect-src 'self'; frame-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'"
+      },
+      "continue": true
+    },
+    { "src": "/", "dest": "/api/site?mode=home" },
+    { "src": "/index.html", "status": 308, "headers": { "Location": "/" } },
+    { "src": "/admin/?", "dest": "/admin/index.html" },
+    { "src": "/assets/data/sistemas.json", "dest": "/api/site?mode=catalog" },
+    { "src": "/sitemap.xml", "dest": "/api/site?mode=sitemap" },
+    {
+      "src": "/proyectos/([a-z0-9-]+)(?:/|/index.html)?",
+      "dest": "/api/site?mode=project&slug=$1"
+    },
+    {
+      "src": "/sistemas/([a-z0-9-]+)(?:/|/index.html)?",
+      "dest": "/api/site?mode=product&slug=$1"
+    },
+    { "handle": "filesystem" }
+  ]
+}

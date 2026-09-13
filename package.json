@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "scripts": {
+    "admin": "node scripts/admin-dev.cjs",
+    "test:admin": "node --test scripts/admin.test.cjs"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

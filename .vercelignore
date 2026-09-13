@@ -1,0 +1,7 @@
+.cache
+.claude
+.git
+.env*
+!.env.example
+reports
+public-dist

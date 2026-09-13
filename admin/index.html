@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>Administración | Ecovatio Energy</title>
+    <link rel="stylesheet" href="/admin/admin.css" />
+    <script src="/admin/admin.js" defer></script>
+  </head>
+  <body>
+    <section id="login" class="login" hidden>
+      <form id="login-form" class="login-card">
+        <a class="brand" href="/">ECOVATIO <span>ENERGY</span></a>
+        <p class="eyebrow">GESTIÓN DE CONTENIDO</p>
+        <h1>Tu web, al día.</h1>
+        <p>Administra productos y proyectos desde un solo lugar.</p>
+        <div id="credentials">
+          <label
+            >Correo<input
+              name="email"
+              type="email"
+              autocomplete="username"
+              required /></label
+          ><label
+            >Contraseña<input
+              name="password"
+              type="password"
+              autocomplete="current-password"
+              required
+          /></label>
+        </div>
+        <p id="local-explanation" hidden>
+          Entorno local de trabajo. Los cambios se guardan en este equipo.
+        </p>
+        <button class="primary" id="login-button">Entrar al panel →</button>
+        <p id="login-status" role="status"></p>
+      </form>
+    </section>
+    <div id="app" class="app" hidden>
+      <aside class="sidebar">
+        <a class="brand" href="/" target="_blank" rel="noopener"
+          >ECOVATIO <span>ENERGY</span></a
+        >
+        <p class="eyebrow">ESPACIO DE TRABAJO</p>
+        <nav aria-label="Administración">
+          <button data-kind="product" class="active">
+            ▦ <span>Productos</span></button
+          ><button data-kind="project">◈ <span>Obras y proyectos</span></button>
+        </nav>
+        <div class="sidebar-bottom">
+          <span class="status-dot"></span
+          ><span id="environment">Panel de contenido</span
+          ><a href="/" target="_blank" rel="noopener">Ver sitio web ↗</a
+          ><button id="logout">Cerrar sesión</button>
+        </div>
+      </aside>
+      <main>
+        <header class="topbar">
+          <span>ECOVATIO / CONTENIDO</span><span id="user-label"></span>
+        </header>
+        <div class="workspace">
+          <div class="page-heading">
+            <div>
+              <p class="eyebrow">CRECER, SIN COMPLICACIONES</p>
+              <h1 id="page-title">Productos</h1>
+              <p id="page-description">
+                Toda la información que tus clientes necesitan para elegir.
+              </p>
+            </div>
+            <button id="new-item" class="primary">+ Nuevo producto</button>
+          </div>
+          <div class="metrics">
+            <article>
+              <span>Total de registros</span><strong id="total">0</strong>
+            </article>
+            <article>
+              <span>Publicados</span><strong id="published">0</strong>
+            </article>
+            <article>
+              <span>Borradores y cambios pendientes</span
+              ><strong id="drafts">0</strong>
+            </article>
+          </div>
+          <div class="list-toolbar">
+            <label class="search"
+              ><span class="sr-only">Buscar por nombre</span
+              ><input
+                id="search"
+                type="search"
+                placeholder="Buscar por nombre o referencia…" /></label
+            ><label
+              ><span class="sr-only">Filtrar por estado</span
+              ><select id="status-filter">
+                <option value="all">Todos los estados</option>
+                <option value="published">Publicados</option>
+                <option value="draft">Borradores y cambios</option>
+              </select></label
+            >
+          </div>
+          <p id="status" role="status" aria-live="polite"></p>
+          <div id="list" class="content-list"></div>
+          <p class="help">
+            Guarda tus cambios como borrador y revisa la vista previa antes de
+            publicar.
+          </p>
+        </div>
+      </main>
+    </div>
+    <dialog id="editor">
+      <form id="edit-form">
+        <header class="editor-header">
+          <div>
+            <p class="eyebrow" id="editor-kind">PRODUCTO</p>
+            <h2 id="editor-title">Nuevo producto</h2>
+          </div>
+          <button
+            type="button"
+            id="close-editor"
+            class="icon-button"
+            aria-label="Cerrar editor"
+          >
+            ✕
+          </button>
+        </header>
+        <div id="fields" class="editor-fields"></div>
+        <p id="editor-status" role="status" aria-live="polite"></p>
+        <footer class="editor-footer">
+          <button type="button" id="archive" class="danger">
+            Retirar de la web
+          </button>
+          <div>
+            <button type="button" id="save-draft">Guardar borrador</button
+            ><button type="button" id="preview">Vista previa ↗</button
+            ><button type="submit" class="primary">Publicar →</button>
+          </div>
+        </footer>
+      </form>
+    </dialog>
+    <dialog id="preview-dialog">
+      <header class="editor-header">
+        <h2>Vista previa del borrador</h2>
+        <button
+          type="button"
+          id="close-preview"
+          aria-label="Cerrar vista previa"
+        >
+          Cerrar ✕
+        </button>
+      </header>
+      <iframe
+        id="preview-frame"
+        title="Vista previa del contenido"
+        sandbox="allow-same-origin allow-scripts"
+      ></iframe>
+    </dialog>
+  </body>
+</html>
