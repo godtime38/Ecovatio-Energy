@@ -3,14 +3,61 @@ document.addEventListener('DOMContentLoaded', function () {
     if (filters) {
         filters.hidden = false;
         var cards = Array.from(document.querySelectorAll('.portfolio-card'));
+        // Shuffle once per load; filters and pagination reuse this same order.
+        for (var i = cards.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            var temporary = cards[i]; cards[i] = cards[j]; cards[j] = temporary;
+        }
+        function firstPageKey() {
+            return cards.slice(0, 4).map(function (card) {
+                return card.querySelector('a').getAttribute('href');
+            }).sort().join('|');
+        }
+        try {
+            // Avoid repeating the same four projects on consecutive reloads.
+            if (cards.length > 4 && sessionStorage.getItem('ecovatio-project-selection') === firstPageKey()) {
+                var replacement = 4 + Math.floor(Math.random() * (cards.length - 4));
+                var replaced = cards[0]; cards[0] = cards[replacement]; cards[replacement] = replaced;
+            }
+            sessionStorage.setItem('ecovatio-project-selection', firstPageKey());
+        } catch (error) { /* Random selection still works if storage is unavailable. */ }
+        var grid = document.querySelector('.portfolio-grid');
+        cards.forEach(function (card) { grid.appendChild(card); });
+        var page = 0;
+        var matching = cards.slice();
+        var pager = document.createElement('nav');
+        pager.className = 'portfolio-pagination';
+        pager.setAttribute('aria-label', 'Páginas de proyectos');
+        var previousPage = document.createElement('button');
+        previousPage.type = 'button'; previousPage.textContent = '← Anterior';
+        var pageLabel = document.createElement('span');
+        var nextPage = document.createElement('button');
+        nextPage.type = 'button'; nextPage.textContent = 'Siguiente →';
+        pager.append(previousPage, pageLabel, nextPage);
+        document.querySelector('.portfolio-count').after(pager);
+        function renderPage() {
+            var total = Math.max(1, Math.ceil(matching.length / 4));
+            page = Math.max(0, Math.min(page, total - 1));
+            cards.forEach(function (card) { card.hidden = true; });
+            matching.slice(page * 4, page * 4 + 4).forEach(function (card) { card.hidden = false; });
+            previousPage.disabled = page === 0;
+            nextPage.disabled = page === total - 1;
+            pageLabel.textContent = 'Página ' + (page + 1) + ' de ' + total;
+            pager.hidden = total <= 1;
+            document.querySelector('.portfolio-count').textContent = matching.length ?
+                'Mostrando ' + (page * 4 + 1) + '–' + Math.min(page * 4 + 4, matching.length) + ' de ' + matching.length + ' proyectos' : 'No hay proyectos en esta categoría';
+        }
+        previousPage.addEventListener('click', function () { page--; renderPage(); });
+        nextPage.addEventListener('click', function () { page++; renderPage(); });
         filters.querySelectorAll('button').forEach(function (button) {
             button.addEventListener('click', function () {
                 filters.querySelectorAll('button').forEach(function (b) { b.setAttribute('aria-pressed', b === button); });
-                cards.forEach(function (card) { card.hidden = button.dataset.projectFilter !== 'Todos' && card.dataset.category !== button.dataset.projectFilter; });
-                var count = cards.filter(function (card) { return !card.hidden; }).length;
-                document.querySelector('.portfolio-count').textContent = count + (count === 1 ? ' proyecto' : ' proyectos');
+                matching = cards.filter(function (card) { return button.dataset.projectFilter === 'Todos' || card.dataset.category === button.dataset.projectFilter; });
+                page = 0;
+                renderPage();
             });
         });
+        renderPage();
     }
     var dialog = document.querySelector('.project-lightbox');
     var photos = Array.from(document.querySelectorAll('[data-gallery-image]'));
