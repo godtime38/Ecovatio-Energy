@@ -181,8 +181,42 @@ html.js .reveal.in { animation: rise .7s ease both; opacity: 1; }
     to { transform: none; }
 }
 
-.nav__logo img { height: 60px; width: auto; filter: brightness(0) invert(1); display: block; }
+.nav__logo img { height: 100px; width: auto; filter: brightness(0) invert(1); display: block; }
 .nav--solid .nav__logo img { height: 48px; }
+
+/* Encuadra el logo horizontal dentro de su lienzo cuadrado. */
+.nav .nav__logo--wordmark {
+    position: relative;
+    display: block;
+    flex: 0 0 260px;
+    width: 260px;
+    height: 48px;
+    overflow: hidden;
+}
+
+.nav .nav__logo--wordmark img {
+    filter: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 300px;
+    max-width: none;
+    transform: translate(-50%, -50%);
+}
+
+@media (max-width: 768px) {
+    .nav .nav__logo--wordmark {
+        flex-basis: 200px;
+        width: 200px;
+        height: 40px;
+    }
+
+    .nav .nav__logo--wordmark img {
+        width: 230px;
+        height: 230px;
+    }
+}
 
 .nav__links { display: flex; align-items: center; gap: 30px; }
 

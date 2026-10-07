@@ -1,0 +1,294 @@
+{
+  "servicios": [
+    {
+      "slug": "instalacion-residencial",
+      "nombre": "Instalación residencial",
+      "titulo": "Paneles solares para su hogar.",
+      "descripcion": "Diseñamos una solución a partir de su consumo, el espacio disponible y las prioridades de su familia.",
+      "publico": "Hogares y villas que buscan aprovechar la energía solar y evaluar opciones de respaldo.",
+      "interes": "residencial",
+      "alcance": [
+        "Revisión de su factura y hábitos de consumo",
+        "Evaluación del techo, espacio y ubicación de equipos",
+        "Propuesta de paneles, inversor y protecciones según el diseño"
+      ],
+      "preparar": [
+        "Facturas eléctricas recientes",
+        "Ubicación y fotos del espacio disponible",
+        "Equipos que desea respaldar, si aplica"
+      ],
+      "preguntas": [
+        {
+          "pregunta": "¿La instalación incluye baterías?",
+          "respuesta": "Se cotizan según su necesidad de respaldo y la compatibilidad del sistema. La propuesta debe indicar si están incluidas."
+        },
+        {
+          "pregunta": "¿Cuánto cuesta instalar paneles en mi casa?",
+          "respuesta": "El precio depende de la potencia, los equipos, el montaje y el alcance de los trabajos. La evaluación permite preparar una cotización para su vivienda."
+        }
+      ],
+      "categoria_proyectos": "Residencial"
+    },
+    {
+      "slug": "instalacion-comercial",
+      "nombre": "Instalación comercial",
+      "titulo": "Energía solar para su negocio.",
+      "descripcion": "Evaluamos cómo consume energía su operación para proponer una instalación acorde con sus horarios y necesidades.",
+      "publico": "Comercios, oficinas y hoteles que desean estudiar el uso de energía solar en su operación.",
+      "interes": "comercial",
+      "alcance": [
+        "Análisis del consumo y horario de operación",
+        "Evaluación del espacio y condiciones de montaje",
+        "Coordinación del alcance y de la instalación con su negocio"
+      ],
+      "preparar": [
+        "Facturas eléctricas y horario del negocio",
+        "Datos de equipos de mayor consumo",
+        "Disponibilidad del local para la evaluación"
+      ],
+      "preguntas": [
+        {
+          "pregunta": "¿Pueden trabajar con el negocio en funcionamiento?",
+          "respuesta": "Durante la planificación se revisan los accesos y las intervenciones necesarias. Los horarios y posibles interrupciones deben acordarse antes de instalar."
+        },
+        {
+          "pregunta": "¿Cómo se calcula el ahorro?",
+          "respuesta": "Se estudian el consumo, la generación prevista y el uso de energía durante el día. La proyección corresponde a las condiciones de cada negocio."
+        }
+      ],
+      "categoria_proyectos": "Comercial"
+    },
+    {
+      "slug": "instalacion-industrial",
+      "nombre": "Instalación industrial",
+      "titulo": "Una solución a la escala de su operación.",
+      "descripcion": "Estudiamos las necesidades energéticas y las condiciones de su instalación para definir el alcance de un proyecto industrial.",
+      "publico": "Naves, almacenes y plantas de producción con necesidades de evaluación técnica y planificación de trabajos.",
+      "interes": "comercial",
+      "alcance": [
+        "Revisión de consumos y cargas de la operación",
+        "Evaluación técnica de superficies e infraestructura existente",
+        "Definición de etapas, accesos y alcance de la propuesta"
+      ],
+      "preparar": [
+        "Histórico de consumo disponible",
+        "Horarios y procesos de mayor demanda",
+        "Planos o información de la instalación, si dispone de ellos"
+      ],
+      "preguntas": [
+        {
+          "pregunta": "¿Pueden dimensionar el sistema solo con una factura?",
+          "respuesta": "La factura sirve como punto de partida. Según la instalación pueden necesitarse información de cargas, mediciones y una visita técnica."
+        },
+        {
+          "pregunta": "¿La propuesta incluye cambios en la infraestructura?",
+          "respuesta": "Las adecuaciones necesarias deben identificarse y detallarse en el alcance y presupuesto del proyecto."
+        }
+      ],
+      "categoria_proyectos": null
+    },
+    {
+      "slug": "mantenimiento-solar",
+      "nombre": "Mantenimiento",
+      "titulo": "Cuide el funcionamiento de su sistema.",
+      "descripcion": "Revisamos su instalación para definir las tareas de mantenimiento y atender las necesidades identificadas.",
+      "publico": "Propietarios de sistemas solares que buscan una revisión preventiva o atención de incidencias.",
+      "interes": "mantenimiento",
+      "alcance": [
+        "Inspección del estado visible de equipos y montaje",
+        "Revisión de funcionamiento y alertas disponibles",
+        "Propuesta de limpieza, ajustes o reparaciones según evaluación"
+      ],
+      "preparar": [
+        "Marca y modelo de sus equipos",
+        "Fecha de instalación y último mantenimiento",
+        "Descripción de incidencias y fotos, si existen"
+      ],
+      "preguntas": [
+        {
+          "pregunta": "¿Cada cuánto necesita mantenimiento?",
+          "respuesta": "La frecuencia se define según los equipos, su entorno, las indicaciones del fabricante y el estado de la instalación."
+        },
+        {
+          "pregunta": "¿La limpieza y los repuestos están incluidos?",
+          "respuesta": "La cotización debe especificar las tareas incluidas. Los repuestos y trabajos adicionales se identifican antes de su aprobación."
+        }
+      ],
+      "categoria_proyectos": null
+    },
+    {
+      "slug": "diagnostico-solar",
+      "nombre": "Diagnóstico",
+      "titulo": "Entienda qué está pasando con su instalación.",
+      "descripcion": "Analizamos la información de su sistema y los síntomas reportados para orientar la revisión técnica.",
+      "publico": "Usuarios con alertas, cambios de producción o dudas sobre el funcionamiento de un sistema existente.",
+      "interes": "mantenimiento",
+      "alcance": [
+        "Recopilación de síntomas y registros disponibles",
+        "Revisión técnica de los equipos y conexiones según el caso",
+        "Explicación de hallazgos y propuesta de acciones"
+      ],
+      "preparar": [
+        "Fotos o códigos de las alertas",
+        "Modelos de inversor y baterías",
+        "Cuándo comenzó el problema y qué cambios ha observado"
+      ],
+      "preguntas": [
+        {
+          "pregunta": "¿Un diagnóstico incluye la reparación?",
+          "respuesta": "La revisión y los trabajos correctivos pueden tener alcances distintos. Se detallarán en la propuesta antes de realizarlos."
+        },
+        {
+          "pregunta": "¿Pueden revisar equipos que no instalaron ustedes?",
+          "respuesta": "Comparta marcas, modelos y el problema observado para confirmar la viabilidad y el alcance de la atención."
+        }
+      ],
+      "categoria_proyectos": null
+    },
+    {
+      "slug": "auditoria-energetica",
+      "nombre": "Auditoría energética",
+      "titulo": "Conozca mejor su consumo.",
+      "descripcion": "Revisamos cómo utiliza la energía para identificar aspectos que conviene estudiar antes de invertir en mejoras o generación solar.",
+      "publico": "Hogares y negocios que desean comprender su consumo y priorizar posibles mejoras.",
+      "interes": "asesoria",
+      "alcance": [
+        "Revisión de facturas y patrones de uso",
+        "Identificación de equipos y horarios relevantes",
+        "Recomendaciones y próximos pasos según la evaluación"
+      ],
+      "preparar": [
+        "Histórico de facturas disponible",
+        "Lista de equipos y horarios de uso",
+        "Objetivos de ahorro o problemas de consumo"
+      ],
+      "preguntas": [
+        {
+          "pregunta": "¿La auditoría obliga a instalar paneles?",
+          "respuesta": "No. Su objetivo es entender el consumo y orientar decisiones. Las opciones pueden incluir cambios de uso, mejoras o un estudio solar."
+        },
+        {
+          "pregunta": "¿Se necesitan mediciones en el lugar?",
+          "respuesta": "Depende de la información disponible y del nivel de análisis acordado. La propuesta indicará si contempla visitas o mediciones."
+        }
+      ],
+      "categoria_proyectos": null
+    },
+    {
+      "slug": "sistemas-hibridos",
+      "nombre": "Sistemas híbridos",
+      "titulo": "Generación solar y respaldo, según sus necesidades.",
+      "descripcion": "Diseñamos la combinación de generación, red y almacenamiento a partir de las cargas que desea atender.",
+      "publico": "Hogares y negocios que quieren evaluar energía solar junto con una solución de respaldo.",
+      "interes": "asesoria",
+      "alcance": [
+        "Selección de cargas prioritarias",
+        "Revisión de compatibilidad entre inversor y baterías",
+        "Propuesta de capacidad y configuración del sistema"
+      ],
+      "preparar": [
+        "Equipos prioritarios y su consumo",
+        "Tiempo de respaldo que desea evaluar",
+        "Datos de su instalación existente, si la tiene"
+      ],
+      "preguntas": [
+        {
+          "pregunta": "¿Puede respaldar toda la propiedad?",
+          "respuesta": "La cobertura depende de las cargas, la potencia del inversor y la capacidad de almacenamiento. Se define durante el dimensionamiento."
+        },
+        {
+          "pregunta": "¿Puedo aprovechar equipos existentes?",
+          "respuesta": "Es necesario revisar sus referencias y condiciones de funcionamiento para determinar qué componentes son compatibles."
+        }
+      ],
+      "categoria_proyectos": null
+    },
+    {
+      "slug": "sistemas-off-grid",
+      "nombre": "Sistemas Off-Grid",
+      "titulo": "Energía para ubicaciones sin conexión a la red.",
+      "descripcion": "Evaluamos una solución de generación y almacenamiento para las condiciones de uso de su propiedad.",
+      "publico": "Viviendas o instalaciones en lugares sin acceso a la red eléctrica que necesitan un estudio de autonomía.",
+      "interes": "asesoria",
+      "alcance": [
+        "Estimación de consumo diario y cargas simultáneas",
+        "Evaluación del espacio de generación y almacenamiento",
+        "Definición de capacidad y necesidades de respaldo complementario"
+      ],
+      "preparar": [
+        "Ubicación y condiciones de acceso",
+        "Equipos, potencia y horas de uso",
+        "Variaciones de ocupación o consumo durante el año"
+      ],
+      "preguntas": [
+        {
+          "pregunta": "¿Cómo se determina la autonomía?",
+          "respuesta": "Se estudian el consumo, la capacidad útil de las baterías y las condiciones de generación previstas. La autonomía debe quedar definida en el diseño."
+        },
+        {
+          "pregunta": "¿Se necesita una fuente de respaldo adicional?",
+          "respuesta": "Se evalúa según la continuidad requerida y las condiciones del proyecto. La propuesta debe explicar cómo se atienden los períodos de menor generación."
+        }
+      ],
+      "categoria_proyectos": null
+    },
+    {
+      "slug": "sistemas-on-grid",
+      "nombre": "Sistemas On-Grid",
+      "titulo": "Aproveche la energía solar con conexión a la red.",
+      "descripcion": "Estudiamos la generación solar para su propiedad y los requisitos de integración con la instalación eléctrica existente.",
+      "publico": "Hogares y negocios conectados a la red que desean evaluar generación solar para su consumo.",
+      "interes": "asesoria",
+      "alcance": [
+        "Revisión del consumo y uso de energía durante el día",
+        "Propuesta de paneles e inversor de conexión a red",
+        "Identificación de trámites y adecuaciones aplicables al proyecto"
+      ],
+      "preparar": [
+        "Facturas y datos del suministro eléctrico",
+        "Ubicación y espacio disponible",
+        "Información de la instalación existente"
+      ],
+      "preguntas": [
+        {
+          "pregunta": "¿Tendré respaldo durante un apagón?",
+          "respuesta": "Una instalación On-Grid convencional no ofrece respaldo por sí sola durante un corte. Si necesita esa función, debe evaluarse una solución diseñada para respaldo."
+        },
+        {
+          "pregunta": "¿La propuesta contempla los trámites de conexión?",
+          "respuesta": "El alcance debe especificar los trámites incluidos y las condiciones aplicables. Se revisan con la distribuidora correspondiente antes de comprometer plazos."
+        }
+      ],
+      "categoria_proyectos": null
+    },
+    {
+      "slug": "baterias-y-respaldo",
+      "nombre": "Baterías solares",
+      "titulo": "Respaldo para lo que más necesita.",
+      "descripcion": "Le ayudamos a evaluar almacenamiento de energía según sus equipos prioritarios y el tiempo de uso que desea cubrir.",
+      "publico": "Usuarios que necesitan estudiar respaldo o incorporar baterías a un sistema compatible.",
+      "interes": "asesoria",
+      "alcance": [
+        "Identificación de cargas a respaldar",
+        "Revisión de inversor, baterías y condiciones de instalación",
+        "Dimensionamiento de capacidad y propuesta de integración"
+      ],
+      "preparar": [
+        "Lista de equipos que desea mantener encendidos",
+        "Horas de respaldo deseadas",
+        "Marca y modelo del inversor, si ya tiene uno"
+      ],
+      "preguntas": [
+        {
+          "pregunta": "¿Cuántas horas dura una batería?",
+          "respuesta": "Depende de su capacidad útil y del consumo conectado. Para estimarlo necesitamos conocer los equipos y cómo se utilizarán."
+        },
+        {
+          "pregunta": "¿Cualquier batería sirve con mi inversor?",
+          "respuesta": "Debe verificarse la compatibilidad del conjunto. Envíenos las referencias para revisar las opciones antes de elegir."
+        }
+      ],
+      "categoria_proyectos": null
+    }
+  ]
+}
